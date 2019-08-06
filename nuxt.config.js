@@ -23,7 +23,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    { src: '~assets/scss/styles.scss', lang: 'css' }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -33,9 +35,7 @@ export default {
    */
   devModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
