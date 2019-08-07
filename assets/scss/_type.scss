@@ -1,3 +1,13 @@
 h1 {
   color : $primary;
 }
+
+::selection {
+  background: #1c1d25;
+  color: #f3f3f3;
+  text-shadow: none;
+}
+
+h1 {
+  font-family: $font-family-accent;
+}

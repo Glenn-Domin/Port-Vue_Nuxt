@@ -1,22 +1,40 @@
 <template>
-  <div>
+  <div class="page">
+    <shapes />
     <nuxt />
   </div>
 </template>
 
-<style>
+<script>
+import shapes from '~/components/global/Shapes.vue'
+
+export default {
+  components: {
+    shapes
+  }
+}
+</script>
+
+<style lang="scss">
+@import '~/assets/scss/_variables.scss';
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.15;
-  word-spacing: 1px;
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-default;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primary;
+  text-align: left;
+  background-color: $dark;
 }
 
 *,
