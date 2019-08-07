@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  border-radius: 0;
+  border: none;
+  background-color: $primary;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  font-family: $font-family-accent;
+  transition: all 0.25s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $dark;
+    box-shadow: inset 150px 0 $accent;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
