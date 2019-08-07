@@ -1,6 +1,20 @@
 <template>
-  <nuxt />
+  <div class="page">
+    <navbar />
+    <nuxt />
+  </div>
 </template>
+
+<script>
+import navbar from '~/components/global/Navbar'
+
+export default {
+  components: {
+    navbar
+  }
+}
+</script>
+
 
 <style lang="scss">
 @import '~/assets/scss/_variables.scss';
