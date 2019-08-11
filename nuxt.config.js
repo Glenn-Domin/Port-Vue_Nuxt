@@ -49,5 +49,15 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  // TODO: Maybe there's a better way of hacking the props attribute to true?
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.map(route => {
+        const tempRoute = route
+        tempRoute['props'] = true
+        return tempRoute
+      })
+    }
   }
 }

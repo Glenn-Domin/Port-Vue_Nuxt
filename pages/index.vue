@@ -19,6 +19,14 @@ export default {
     shapes,
     about
   },
+  props: {
+    dimensions: {
+      type: Object,
+      default() {
+        return { message: 'something is wrong...' }
+      }
+    }
+  },
   data() {
     return {
       showModal: false
@@ -33,6 +41,7 @@ export default {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .title {
@@ -40,8 +49,9 @@ export default {
 }
 
 .subtitle {
-  font-size: 1.75rem;
-  font-weight: 400;
   margin-bottom: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 </style>
