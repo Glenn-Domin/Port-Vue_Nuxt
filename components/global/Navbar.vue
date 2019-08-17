@@ -16,3 +16,31 @@
     </ul>
   </nav>
 </template>
+
+<style lang="scss">
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 1rem;
+
+  a {
+    display: flex;
+    padding: 1rem;
+    font-weight: 500;
+    color: white;
+
+    svg {
+      margin-right: .5rem;
+    }
+  }
+}
+</style>

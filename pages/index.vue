@@ -28,15 +28,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .above-fold {
-  margin: 0 auto;
+  margin: auto;
   min-height: 100vh;
   display: flex;
   align-items: center;
   color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
+</style>
 
+<style>
 .title {
   font-size: 4rem;
 }
