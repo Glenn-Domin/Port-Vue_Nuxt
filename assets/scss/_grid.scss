@@ -3,11 +3,14 @@
   margin-right: auto;
   padding-left: 60px;
   padding-right: 60px;
+  max-width: 1170px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-left: -1rem;
   margin-right: -1rem;
 
@@ -16,27 +19,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 400px;
-    align-self: center;
   }
 
   .side {
-    justify-self: end;
-    margin-left: auto;
-    align-self: center;
     flex: 0 1 600px;
-  }
-}
-
-.content-left {
-  flex: 1 0 400px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media only screen and (min-width: 75em) {
-
-  .container {
-    width: 100%;
-    max-width: 1170px;
   }
 }
