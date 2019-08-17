@@ -15,17 +15,10 @@ import shapes from '~/components/global/Shapes'
 import about from '~/components/home/About'
 
 export default {
+  layout: 'default',
   components: {
     shapes,
     about
-  },
-  props: {
-    dimensions: {
-      type: Object,
-      default() {
-        return { message: 'something is wrong...' }
-      }
-    }
   },
   data() {
     return {

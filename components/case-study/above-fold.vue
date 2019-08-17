@@ -1,29 +1,11 @@
 <template>
-  <header
-  class="above-fold"
-  :style="'background-image: url(' + image + ')'">
+  <header class="above-fold">
     <div class="item-content">
-      <h2 class="item-title">Campdraft One</h2>
-      <h3 class="item-subtitle">Back-end management system.</h3>
+      <slot name="heading" />
+      <slot name="subheading" />
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  props: {
-    img: {
-      type: String,
-      default: ''
-    }
-  },
-  data() {
-    return {
-      image: require('~/static/images/cd-lg-op.jpg')
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .above-fold {

@@ -38,10 +38,12 @@ export default {
   },
   methods: {
     nextPage(caseStudy) {
+      // Getting dimensions and setting transition logic
       const el = this.$refs[caseStudy]
       const dimensions = el.getBoundingClientRect()
       this.parentDimensions = `width: ${dimensions.width}px; height: ${dimensions.height}px;`
       this.transitioning = true
+      // Transition thumbnail to full-screen
       TweenMax.fromTo(el, .45, {
         top: dimensions.top,
         left: dimensions.left,
@@ -53,6 +55,7 @@ export default {
         width: Math.max(document.documentElement.clientWidth, window.innerWidth),
         height: Math.max(document.documentElement.clientHeight, window.innerHeight)
       })
+      // After transition time, change the route
       setTimeout(() => {
         this.$router.push({ name: 'case-studies-' + caseStudy, params: { dimensions } })
       }, 450);
@@ -114,16 +117,13 @@ export default {
   color: #fff;
   z-index: 10;
   max-width: 550px;
-  -webkit-transform: scale(1) translateX(0);
   transform: scale(1) translateX(0);
-  transition: opacity .25s,-webkit-transform .45s;
   transition: transform .45s,opacity .25s;
-  transition: transform .45s,opacity .25s,-webkit-transform .45s;
 }
 
 .item-title {
   margin-bottom: 0;
-  font-family: League Spartan,Helvetica,Arial,sans-serif;
+  font-family: League Spartan, Helvetica,Arial, sans-serif;
   font-size: 3rem;
 }
 

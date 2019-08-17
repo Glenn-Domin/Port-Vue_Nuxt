@@ -146,6 +146,8 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  height: auto;
+  max-width: 100%;
 }
 
 svg:not(:root) {
