@@ -1,28 +1,23 @@
 <template>
   <article class="case-content container">
     <above-fold :style="'background-image: url(' + banner + ')'">
-      <h1 slot="heading" class="item-title">Campdraft One</h1>
-      <h2 slot="subheading" class="item-subtitle">Back-end management system.</h2>
+      <h1 slot="heading" class="item-title">Australian Campdrafting Association</h1>
+      <h2 slot="subheading" class="item-subtitle">Public-facing site.</h2>
     </above-fold>
     <section id="content" class="row">
       <div class="content">
         <h2 class="font-accent">What is it?</h2>
-        <p>Campdraft One is a bespoke, massively scalable back-end web application we built for <nuxt-link to="/case-studies/campdraft">Australian Campdrafting Association</nuxt-link> Admins and Members.</p>
+        <p>Australian Campdrafting Association is a public-facing site, displaying events, contacts and results.</p>
         <ul class="list">
           <li>2018 onwards</li>
-          <li>Over 20,000 members</li>
-          <li>Six-figure budget</li>
+          <li>Including data from Campdraft One web app.</li>
         </ul>
         <h2 class="font-accent">The Challenge</h2>
-        <p>The major challenges on this project were two-fold:</p>
-        <ul class="list">
-          <li><b>Front-end</b>: I was solely responsible for architecting what would be by far my largest project to-date. I needed to ensure my code could scale and the project wouldn't blow out in size when more features were added later. In this task I think I was successful.</li>
-          <li><b>Back-end</b>: I only played a minor role here but it was a challenge to compile the client's logic (which includes many exceptions and edge-cases) into fixed rules. This required a lot of planning and communication, both with the team and the client. This is an on-going challenge as we add more features to the live site but we're improving.</li>
-        </ul>
+        <p>This site needed sections that were easily editable by the client, while also including up-to-date data from the back-end web app.</p>
+        <p>We decided to go for a hybrid approach. It's a WordPress site for the most part, but with VueJS components to show the data from similar endpoints to the <nuxt-link to="/case-studies/campdraft-one">Campdraft One web app</nuxt-link>.</p>
       </div>
       <div class="side">
-        <img src="~/static/images/cd1-op.jpg">
-        <img src="~/static/images/cd3-op.jpg">
+        <img src="~/static/images/cd5-op.jpg">
       </div>
     </section>
     <section>
@@ -30,21 +25,20 @@
       <ul class="list tech-list">
         <li class="row">
           <div class="content">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69" width="167.42" height="145"><path d="M161.096.001l-30.224 52.35L100.647.002H-.005L130.872 226.69 261.749 0z" fill="#41b883"/><path d="M161.096.001l-30.224 52.35L100.647.002H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="167.42"><path fill="#464342" d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
           </div>
           <div class="side">
-            <h3 class="font-accent">VueJS</h3>
-            <p>This project was one of two major web applications we had built, so this was a major learning experience. We chose VueJS as it's extremely performant and has a narrower learning curve than other JS frameworks.</p>
-            <p>After some trial and error I came to an optimal workflow, which leant heavily on re-usable components. This resulted in a lot of saved time and effort when it came to rolling out new features. We could simply re-use or extend an existing component rather than build something new.</p>
+            <h3 class="font-accent">WordPress</h3>
+            <p>This site is mainly built on WordPress. There's some extra logic including VueJS components in the right places, as well as some WordPress navigation and breadcrumb hacks for dynamically generated pages based on back-end data.</p>
           </div>
         </li>
         <li class="row">
           <div class="content">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 875.7" width="167.42"><path fill="#FFF" d="M387 0l387 218.9v437.9L387 875.7 0 656.8V218.9z"/><path fill="#8ed6fb" d="M704.9 641.7L399.8 814.3V679.9l190.1-104.6 115 66.4zm20.9-18.9V261.9l-111.6 64.5v232l111.6 64.4zM67.9 641.7L373 814.3V679.9L182.8 575.3 67.9 641.7zM47 622.8V261.9l111.6 64.5v232L47 622.8zm13.1-384.3L373 61.5v129.9L172.5 301.7l-1.6.9-110.8-64.1zm652.6 0l-312.9-177v129.9l200.5 110.2 1.6.9 110.8-64z"/><path fill="#1c78c0" d="M373 649.3L185.4 546.1V341.8L373 450.1v199.2zm26.8 0l187.6-103.1V341.8L399.8 450.1v199.2zm-13.4-207zM198.1 318.2l188.3-103.5 188.3 103.5-188.3 108.7-188.3-108.7z"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69" width="167.42" height="145"><path d="M161.096.001l-30.224 52.35L100.647.002H-.005L130.872 226.69 261.749 0z" fill="#41b883"/><path d="M161.096.001l-30.224 52.35L100.647.002H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
           </div>
           <div class="side">
-            <h3 class="font-accent">Webpack</h3>
-            <p>Webpack and Vue go hand-in-glove. It makes compiling CSS and JS really simple in 99% of cases.</p>
+            <h3 class="font-accent">VueJS</h3>
+            <p>One of the major benefits of Vue is its modular nature; you don't need a "Vue app" in order to include a single Vue component, just include it where you need it. That's what we did here.</p>
           </div>
         </li>
         <li class="row">
@@ -54,7 +48,7 @@
           <div class="side">
             <h3 class="font-accent">Bootstrap</h3>
             <p>This project needed to be as maintainable as possible, which meant using a CSS framework with which the agency was most familiar, and that meant Bootstrap.</p>
-            <p>Bootstrap has been a tried and true addition to our front-end stack.</p>
+            <p>We tend to use a WordPress starter theme called Understrap, which includes Bootstrap and Gulp for SCSS compilation.</p>
           </div>
         </li>
         <li class="row">
@@ -76,11 +70,11 @@
             <li><b>Docker</b>: We've been getting in to Docker more and more lately for our development environment after having sub-par results with Vagrant. It works great when it works, but there are sometimes a few kinks to work out.</li>
           </ul>
           <h3 class="font-accent">Key Lesson</h3>
-          <p><b>Data Management</b>: I initially went for a 3rd party plugin to handle tabulated data (we have paginated pages of tens of thousands of records). This initally went pretty well and it was a very smooth experience being able to click a filter or type a search term and have the results populate instantly since all the records are present in the browser, but given the expanding amount of data and the low-end devices and Internet connections of a large proportion of our client's customer-base, we opted for a custom solution, where only a single page of data (approximately 20 records) would be sent by the back-end.</p>
-          <p>This resulted in a massive improvement in user experience, due to the end-user now only needing to wait for 20 records to download instead of tens of thousands. It also simplified the front-end logic, though now things like searching, paginating, filtering are now handled in the back-end.</p>
+          <p><b>Using Vue without Webpack</b>: When you're just incorporating a single (or multiple) Vue components in a non-Vue site you don't need a fully-fledged Webpack project. This has pros and cons. A pro is there's less JavaScript to load. A con is you don't have webpack/babel to help you compile things.</p>
+          <p>This was only an issue in Internet Explorer (by default Vue components are HTML compliant but we were using some ES6 that had to be converted for older browsers). I included a Gulp task to compile JS on save. This wasn't too much hassle as the WordPress theme already used Gulp to compile SCSS.</p>
         </div>
         <div class="content">
-          <img src="~/static/images/cd2-op.jpg">
+          <img src="~/static/images/cd6-op.jpg">
         </div>
       </div>
     </section>
@@ -91,31 +85,36 @@
 import aboveFold from '~/components/case-study/above-fold'
 
 export default {
-  name: 'CampdraftOne',
+  name: 'AustralianCampdraftingAssociation',
   layout: 'case-study',
   components: {
     'above-fold': aboveFold
   },
   data() {
     return {
-      banner: require('~/static/images/cd-lg-op.jpg')
+      banner: require('~/static/images/cd4-lg-op.jpg')
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import '~/assets/scss/_variables.scss';
 .page {
   position: relative;
   overflow-x: hidden;
 }
 
 .case-content {
- margin-top: 100vh;
+  margin-top: 100vh;
 
- section {
-  padding-bottom: 60px;
- }
+  section {
+    padding-bottom: 60px;
+  }
+
+  a {
+    color: $primary;
+  }
 }
 </style>
 

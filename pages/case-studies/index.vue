@@ -4,23 +4,26 @@
       <h1 class="title text-center">Case Studies</h1>
       <h2 class="subtitle text-center">Notable works</h2>
     </section>
-    <section class="container case-listing">
-      <article
-      v-if="images"
-      class="item"
-      :style="{ parentDimensions: transitioning }">
-        <a
-        ref="campdraft-one"
-        :href="'case-studies-' + 'campdraft-one'"
-        :class="['item-link', { 'item-transitioning': transitioning }]"
-        :style="'background-image: url(' + images.campdraft + ')'"
-        @click.prevent="nextPage('campdraft-one')">
-          <div class="item-content">
-            <h2 class="item-title">Campdraft One</h2>
-            <h3 class="item-subtitle">Back-end management system.</h3>
-          </div>
-        </a>
-      </article>
+    <section class="case-listing">
+      <div class="container">
+        <article
+        v-for="image in images"
+        :key="image.name"
+        class="item"
+        :style="{ parentDimensions: transitioning }">
+          <a
+          :ref="image.name"
+          :href="'case-studies-' + image.name"
+          :class="['item-link', { 'item-transitioning': transitioning }]"
+          :style="'background-image: url(' + image.path + ')'"
+          @click.prevent="nextPage(image.name)">
+            <div class="item-content">
+              <h2 class="item-title">{{ image.label }}</h2>
+              <h3 class="item-subtitle">{{ image.sub }}</h3>
+            </div>
+          </a>
+        </article>
+      </div>
     </section>
   </main>
 </template>
@@ -31,9 +34,18 @@ import { TweenMax } from "gsap/TweenMax"
 export default {
   data() {
     return {
-      images: {
-        campdraft: require('~/static/images/cd-lg-op.jpg')
-      },
+      images: [{
+          name: 'campdraft-one',
+          label: 'Campdraft One',
+          sub: 'Back-end management system.',
+          path: require('~/static/images/cd-lg-op.jpg')
+        },
+        {
+          name: 'campdraft',
+          label: 'Australian Campdrafting Association',
+          sub: 'Public-facing site.',
+          path: require('~/static/images/cd4-lg-op.jpg')
+      }],
       transitioning: false,
       parentDimensions: null
     }
@@ -41,7 +53,7 @@ export default {
   methods: {
     nextPage(caseStudy) {
       // Getting dimensions and setting transition logic
-      const el = this.$refs[caseStudy]
+      const el = this.$refs[caseStudy][0]
       const dimensions = el.getBoundingClientRect()
       this.parentDimensions = `width: ${dimensions.width}px; height: ${dimensions.height}px;`
       this.transitioning = true
@@ -59,6 +71,7 @@ export default {
       })
       // After transition time, change the route
       setTimeout(() => {
+        scroll(0,0)
         this.$router.push({ name: 'case-studies-' + caseStudy, params: { dimensions } })
       }, 450);
     }
@@ -84,6 +97,14 @@ export default {
     background-color: #1c1d25;
     box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     margin: 5rem auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     .item-link {
       display: block;
@@ -123,10 +144,11 @@ export default {
 .item-content {
   position: absolute;
   left: 90px;
+  right: 90px;
   bottom: 90px;
   color: #fff;
   z-index: 10;
-  max-width: 550px;
+  max-width: 650px;
   transform: scale(1) translateX(0);
   transition: transform .45s,opacity .25s;
 }
