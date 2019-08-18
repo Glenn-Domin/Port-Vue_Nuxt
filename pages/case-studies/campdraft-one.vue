@@ -4,7 +4,7 @@
       <h1 slot="heading" class="item-title">Campdraft One</h1>
       <h2 slot="subheading" class="item-subtitle">Back-end management system.</h2>
     </above-fold>
-    <section class="row" id="content">
+    <section id="content" class="row">
       <div class="content">
         <h2 class="font-accent">What is it?</h2>
         <p>Campdraft One is a bespoke, massively scalable back-end web application we built for Australian Campdrafting Association Admins and Members.</p>

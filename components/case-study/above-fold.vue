@@ -57,6 +57,19 @@ html {
   text-align: center;
   padding-bottom: .5rem;
   animation: fadeIn .3s ease 0s 1 forwards;
+
+  svg {
+    margin-bottom: 1rem;
+    transition: transform .3s ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    svg {
+      transform: translateY(1rem);
+    }
+  }
 }
 
 @keyframes fadeIn {

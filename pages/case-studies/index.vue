@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import TweenMax from "gsap/TweenMax"
+import { TweenMax } from "gsap/TweenMax"
 
 export default {
   data() {
