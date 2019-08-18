@@ -106,6 +106,10 @@ export default {
         transition: opacity .3s ease;
         z-index: 2;
       }
+
+      &:hover::after {
+        opacity: .75;
+      }
     }
 
     .item-transitioning {

@@ -4,7 +4,7 @@
       <h1 slot="heading" class="item-title">Campdraft One</h1>
       <h2 slot="subheading" class="item-subtitle">Back-end management system.</h2>
     </above-fold>
-    <section class="row">
+    <section class="row" id="content">
       <div class="content">
         <h2 class="font-accent">What is it?</h2>
         <p>Campdraft One is a bespoke, massively scalable back-end web application we built for Australian Campdrafting Association Admins and Members.</p>
@@ -13,9 +13,16 @@
           <li>Over 20,000 members</li>
           <li>Six-figure budget</li>
         </ul>
+        <h2 class="font-accent">The Challenge</h2>
+        <p>The major challenges on this project were two-fold:</p>
+        <ul class="list">
+          <li><b>Front-end</b>: I was solely responsible for architecting what would be by far my largest project to-date. I needed to ensure my code could scale and the project wouldn't blow out in size when more features were added later. In this task I think I was successful.</li>
+          <li><b>Back-end</b>: I only played a minor role here but it was a challenge to compile the client's logic (which includes many exceptions and edge-cases) into fixed rules. This required a lot of planning and communication, both with the team and the client. This is an on-going challenge as we add more features to the live site but we're improving.</li>
+        </ul>
       </div>
       <div class="side">
         <img src="~/static/images/cd1-op.jpg">
+        <img src="~/static/images/cd3-op.jpg">
       </div>
     </section>
     <section>
@@ -61,6 +68,21 @@
           </div>
         </li>
       </ul>
+      <div class="row">
+        <div class="side">
+          <h3 class="font-accent">Other noteable tech</h3>
+          <ul class="list">
+            <li><b>Laravel</b>: The back-end devs used Laravel to build out the back-end of the site. Requests are all API-based. I'd use those APIs to do CRUD calls (Create, Read, Update, Delete).</li>
+            <li><b>Docker</b>: We've been getting in to Docker more and more lately for our development environment after having sub-par results with Vagrant. It works great when it works, but there are sometimes a few kinks to work out.</li>
+          </ul>
+          <h3 class="font-accent">Key Lesson</h3>
+          <p><b>Data Management</b>: I initially went for a 3rd party plugin to handle tabulated data (we have paginated pages of tens of thousands of records). This initally went pretty well and it was a very smooth experience being able to click a filter or type a search term and have the results populate instantly since all the records are present in the browser, but given the expanding amount of data and the low-end devices and Internet connections of a large proportion of our client's customer-base, we opted for a custom solution, where only a single page of data (approximately 20 records) would be sent by the back-end.</p>
+          <p>This resulted in a massive improvement in user experience, due to the end-user now only needing to wait for 20 records to download instead of tens of thousands. It also simplified the front-end logic, though now things like searching, paginating, filtering are now handled in the back-end.</p>
+        </div>
+        <div class="content">
+          <img src="~/static/images/cd2-op.jpg">
+        </div>
+      </div>
     </section>
   </article>
 </template>
@@ -99,11 +121,16 @@ export default {
 
 <style lang="scss" scoped>
 .list {
-  margin-bottom: 0;
+  margin-bottom: 3rem;
   padding-left: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .tech-list {
+  margin-bottom: 3rem;
 
   li {
     padding-top: .5rem;
