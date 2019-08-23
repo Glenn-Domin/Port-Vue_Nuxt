@@ -45,6 +45,12 @@ export default {
           label: 'Australian Campdrafting Association',
           sub: 'Public-facing site.',
           path: require('~/static/images/cd4-lg-op.jpg')
+      },
+        {
+          name: 'tus',
+          label: 'Total Uniform Solutions',
+          sub: 'Magento multi-store e-commerce site.',
+          path: require('~/static/images/tus-lg-op.jpg')
       }],
       transitioning: false,
       parentDimensions: null
@@ -98,11 +104,11 @@ export default {
     box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     margin: 5rem auto;
 
-    &:first-child {
+    &:nth-child(odd) {
       margin-left: 0;
     }
 
-    &:last-child {
+    &:nth-child(even) {
       margin-right: 0;
     }
 
