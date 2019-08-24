@@ -18,7 +18,7 @@
               <cite>Most people</cite>
             </blockquote>
             <p>I don't mean what most people mean when they say "I know HTML".</p>
-            <p>What I mean is not only what HTML tags are available and how to lay them out, I also know why you should be concerned about Semantic HTML and Accessibility, as well as what do to about it.</p>
+            <p>What I mean is not only what HTML tags are available and how to lay them out, I also know why you should be concerned about <strong>Semantic HTML</strong> and <strong>Accessibility</strong>, as well as what do to about it.</p>
             <p class="code-desc">Semantic Code</p>
             <code class="code-good">{{codeGood}}</code>
             <p class="code-desc">Bad Code</p>
@@ -33,7 +33,7 @@
             <p><strong>Example</strong>: we've done a lot of styling with Functional CSS (i.e., using lots of re-usable helper classes). This became unwieldy when we had to add many classes to a single element (observant readers will recognise the use of Bootstrap's utility classes).</p>
             <p class="code-desc">Functional CSS</p>
             <code>{{codeFunctional}}</code>
-            <p>To remedy this, I came up with a system of selective abstraction. If you're using the same list of classes for multiple elements (like a series of list tags), it's time to abstract these classes into components (extra points if the component is re-usable, so code-bases don't balloon in size).</p>
+            <p>To remedy this, I came up with a system of selective abstraction. If you're using the same list of classes for multiple elements (like a series of list tags) or if you have more than five utility classes on the same element, it's time to abstract these classes into components (extra points if the component is re-usable, so code-bases don't balloon in size).</p>
             <p class="code-desc">Abstracted HTML</p>
             <code class="code-good">{{codeWClass}}</code>
             <p class="code-desc">Associated CSS</p>

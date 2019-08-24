@@ -4,7 +4,7 @@
       <h1 class="title text-center">Case Studies</h1>
       <h2 class="subtitle text-center">Notable works</h2>
     </section>
-    <section class="content case-listing">
+    <section class="case-listing">
       <div class="container">
         <article
         v-for="image in images"
@@ -141,6 +141,12 @@ export default {
 </style>
 
 <style lang="scss">
+.case-listing {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: white;
+}
+
 .item-content {
   position: absolute;
   left: 90px;
