@@ -7,7 +7,7 @@
     <section class="content">
       <div class="container">
         <div class="row">
-          <div class="content-big">
+          <div class="skills content-big">
             <h2 id="thebasics">The Basics</h2>
             <h3 class="skills-heading" id="html">
               <html5 width="50"/>
@@ -40,6 +40,7 @@
             <code class="code-good">{{codeCSSGood}}</code>
             <p class="code-desc">Problematic Alternative CSS</p>
             <code class="code-bad">{{codeCSSBad}}</code>
+            <p>We'll always use <strong>SCSS</strong> in projects.</p>
             <h3 class="skills-heading" id="js">
               <javascript width="50" />
               JavaScript
@@ -49,17 +50,85 @@
             <code>{{codeJS}}</code>
             <p class="code-desc">Babel Translated for older browsers</p>
             <code>{{codeJSVerbose}}</code>
+            <p>Most of my JS is written in <a href="vue">VueJS</a> prjects.</p>
+            <h2 id="cms">Content Management Systems</h2>
+            <h3 class="skills-heading" id="wp">
+              <wordpress width="50" color="#32373c" />
+              WordPress
+            </h3>
+            <p>I've built a zillion sites in WordPress. As I consider most of them relatively basic (brochure sites or basic e-commerce sites), I haven't included <nuxt-link class="nav-link" to="/case-studies">case studies</nuxt-link> for most of them. I'll be including sites that are particularly special.</p>
+            <p>I think we've got a very good procedure for developing WordPress sites.</p>
+            <ol>
+              <li>Spin up custom docker container.</li>
+              <li>Use the WP CLI to install plugins not available in the WP Plugins Directory.</li>
+              <li>Push to Git/Bitbucket/CodeBuild.</li>
+              <li>You're done!</li>
+            </ol>
+            <p>The docker container will generate some starter plugins we've decided should be mandatory; Adavanced Custom Fields, a security plugin and a logging plugin. There's also our forked version of the starter "Understrap" theme and child theme (the biggest difference is the use of Webpack but there are many changes). Finally it includes sensible WP settings such as locking off updates and file edits except on local.</p>
+            <h4>Our Approach</h4>
+            <ul class="list">
+              <li>We haven't found a good use-case for Gutenberg.</li>
+              <li>Use custom fields (text/WYSIWYG/repeaters/groups/global options) for client-editable content.</li>
+              <li>Use standards-based SCSS/Bootstrap, as well as WP templates.</li>
+              <li>Make it harder for the client to break and keep logs to say who did what in the back-end.</li>
+            </ul>
+            <h3 class="skills-heading" id="magento">
+              <magento width="50" />
+              Magento
+            </h3>
+            <p>I've worked on quite a lot of Magento sites (some Magento 1 but mostly Magento 2) sites over the years, my poster-child for which is <nuxt-link class="nav-link" to="case-studies/tus">Total Uniform Solutions</nuxt-link>.</p>
+            <p>We've been using a docker container for setting up a dev environment but I think there's more to investigate performance-wise for ease of development.</p>
+            <p>We've eschewed the default Magento LESS functionality for SCSS and Bootstrap, with the noteable exceptions of layout and buttons (sort of).</p>
+            <p>I'm fairly confident with the Magento front-end, though there are some things in the XML and JS arenas where I need to learn more about the Magento way of doing things. I'm undertaking certified Magento training to accomplish this.</p>
+            <h3 class="skills-heading" id="magento">
+              <joomla width="50" />
+              Joomla
+            </h3>
+            <p><strong>Disclaimer:</strong> I'm aware Joomla is basically dead.</p>
+            <p>This is a shame because I got very good at it. Roughly half of the sites I've worked on over the years have been Joomla, though they obviously skewed towards the beginning of my career.</p>
+            <p>We had a custom template I and a co-worker developed in-house.</p>
+            <h3 id="cmsothers">Others</h3>
+            <p>CMSes where I have <em>some</em> experience.</p>
+            <ul class="list">
+              <li>Shopify</li>
+              <li>Drupal</li>
+              <li>BigCommerce</li>
+            </ul>
+            <h2>Frameworks</h2>
+            <h3 class="skills-heading" id="magento">
+              <bootstrap width="50" />
+              Bootstrap
+            </h3>
+            <p>Bootstrap has been a staple in my projects since Bootstrap 3. It's customisation options are of a very high standard, their supplied code-snippets are semantic and accessible, and I completely reject the critisism that some devs will have about it, that all Bootstrap sites look alike.</p>
+            <p>While some of their components could be improved (like allowing parent menu items to actually be links), I'd say it's almost perfect.</p>
+            <p>We'll always use the SCSS implementation on every project.</p>
+            <h3 class="skills-heading" id="magento">
+              <vuejs width="50" />
+              VueJS
+            </h3>
+            <p>I've used VueJS as the JS framework in a few very large, data-heavy projects, one of which is e-commerce and I find it's a great way to lay out a project in a simple way.</p>
           </div>
           <aside class="content-small content-top content-sticky">
             <h2>Navigation</h2>
             <nav>
               <ul>
-                <li><a href="#thebasics">The Basics</a></li>
-                <ul>
-                  <li><a href="#html">HTML</a></li>
-                  <li><a href="#css">CSS</a></li>
-                  <li><a href="#js">JavaScript</a></li>
-                </ul>
+                <li>
+                  <a href="#thebasics">The Basics</a>
+                  <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#js">JavaScript</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#cms">Content Management Systems</a>
+                  <ul>
+                    <li><a href="#wp">WordPress</a></li>
+                    <li><a href="#magento">Magento</a></li>
+                    <li><a href="#joomla">Joomla</a></li>
+                    <li><a href="#cmsothers">Others</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </aside>
@@ -73,12 +142,22 @@
 import html5 from '~/components/global/shapes/HTML'
 import css from '~/components/global/shapes/CSS'
 import javascript from '~/components/global/shapes/Javascript'
+import wordpress from '~/components/global/shapes/WP'
+import magento from '~/components/global/shapes/Magento'
+import joomla from '~/components/global/shapes/Joomla'
+import bootstrap from '~/components/global/shapes/Bootstrap'
+import vuejs from '~/components/global/shapes/Vue'
 
 export default {
   components: {
     html5,
     css,
-    javascript
+    javascript,
+    wordpress,
+    magento,
+    joomla,
+    bootstrap,
+    vuejs
   },
   data() {
     return {
@@ -157,6 +236,14 @@ _numbers;`
 
 <style lang="scss" scoped>
 @import '~/assets/scss/_variables.scss';
+
+.skills {
+
+  h3 {
+    margin-top: 3rem;
+  }
+}
+
 .skills-heading {
   display: flex;
   align-items: center;
