@@ -1,8 +1,8 @@
 <template>
   <div class="shapes" aria-hidden="true">
-    <vue class="shape vue" width="25" height="21.64" />
+    <vue class="shape vue" width="30" height="25.97" />
     <bootstrap class="shape bootstrap" width="25" height="25" />
-    <javascript class="shape js" width="25" height="28.56" />
+    <javascript class="shape js" width="35" height="40" />
     <css class="shape css" width="25" height="25" />
     <html5 class="shape html" width="25" height="33.33" />
     <wordpress class="shape wp" width="25" height="25" />

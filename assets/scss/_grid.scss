@@ -14,8 +14,12 @@
   margin-left: -1rem;
   margin-right: -1rem;
 
+  .content, .side {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .content {
-    flex: 1 0 400px;
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 400px;
@@ -23,5 +27,10 @@
 
   .side {
     flex: 0 1 600px;
+  }
+
+  .row-heading {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
