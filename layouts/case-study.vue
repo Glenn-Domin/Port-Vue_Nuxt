@@ -29,20 +29,6 @@ export default {
   }
 }
 
-.content a {
-  font-weight: 500;
-  border-bottom: 2px solid $primary;
-  text-decoration: none;
-  color: $primary;
-  box-shadow: inset 0 0 0 0.01px $primary;
-  transition: all 0.25s;
-
-  &:hover {
-    color: white;
-    box-shadow: inset 0 -1.5em 0 0 $primary;
-  }
-}
-
 .list {
   margin-bottom: 3rem;
   padding-left: 0;

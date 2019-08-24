@@ -14,23 +14,50 @@
   margin-left: -1rem;
   margin-right: -1rem;
 
-  .content, .side {
+  .content-small, .content-big {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .content {
+  .content-small {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 400px;
   }
 
-  .side {
+  .content-big {
     flex: 0 1 600px;
+    max-width: 600px;
+  }
+
+  .content-top {
+    align-self: flex-start;
+  }
+
+  .content-sticky {
+    position: sticky;
+    top: 0;
   }
 
   .row-heading {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+// Scrollbar
+body {
+
+  &::-webkit-scrollbar {
+    width: .75rem;
+    background-color: $dark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
 }

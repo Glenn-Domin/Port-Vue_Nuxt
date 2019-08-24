@@ -1,0 +1,23 @@
+.page-heading {
+  color: white;
+}
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: white;
+}
+
+blockquote {
+  background-color: $light;
+  padding: 1rem 1.25rem;
+
+  cite {
+    display: block;
+    font-size: .875rem;
+
+    &::before {
+      content: '— ';
+    }
+  }
+}

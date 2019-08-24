@@ -6,7 +6,7 @@
     <div class="about">
       <h2 class="font-accent">About Me.</h2>
       <span class="presentation-text" aria-hidden="true">About</span>
-      <p>I've been a Front-End Developer doing agency work for roughly five years. Prior to that I've done freelance work, as well as creating websites for businesses I've worked at in other capacities.</p>
+      <p>I've been a Front-End Developer doing agency work for roughly seven years. Prior to that I've done freelance work, as well as creating websites for businesses I've worked at in other capacities.</p>
       <p>I've gained exposure in as many facets of web development as I can, as well as dipping my toe in to design/UX/UI. I've also managed to specialise in a few key areas:</p>
       <ul class="proficiency-list">
         <li>

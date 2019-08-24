@@ -1,10 +1,10 @@
 <template>
   <main>
-    <section class="case-heading">
+    <section class="page-heading">
       <h1 class="title text-center">Case Studies</h1>
       <h2 class="subtitle text-center">Notable works</h2>
     </section>
-    <section class="case-listing">
+    <section class="content case-listing">
       <div class="container">
         <article
         v-for="image in images"
@@ -86,21 +86,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.case-heading {
-  color: white;
-}
-
+@import '~/assets/scss/_variables.scss';
 .case-listing {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: white;
 
   .item {
     display: block;
     width: 80%;
     height: 480px;
     opacity: 1;
-    background-color: #1c1d25;
+    background-color: $dark;
     box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     margin: 5rem auto;
 
@@ -128,7 +122,7 @@ export default {
         height: 100%;
         width: 100%;
         display: block;
-        background: #1c1d25;
+        background: $dark;
         opacity: .6;
         transition: opacity .3s ease;
         z-index: 2;
