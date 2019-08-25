@@ -14,7 +14,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preload', as: 'font', crossorigin: 'crossorigin', type: 'font/woff2', href: '~static/fonts/leaguespartan-bold-webfont.woff2' }
+    ]
   },
   /*
    ** Customize the progress-bar color
