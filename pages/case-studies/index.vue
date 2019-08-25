@@ -6,23 +6,25 @@
     </section>
     <section class="case-listing">
       <div class="container">
-        <article
-        v-for="image in images"
-        :key="image.name"
-        class="item"
-        :style="{ parentDimensions: transitioning }">
-          <a
-          :ref="image.name"
-          :href="'case-studies-' + image.name"
-          :class="['item-link', { 'item-transitioning': transitioning }]"
-          :style="'background-image: url(' + image.path + ')'"
-          @click.prevent="nextPage(image.name)">
-            <div class="item-content">
-              <h2 class="item-title">{{ image.label }}</h2>
-              <h3 class="item-subtitle">{{ image.sub }}</h3>
-            </div>
-          </a>
-        </article>
+        <client-only>
+          <article
+          v-for="image in images"
+          :key="image.name"
+          class="item"
+          :style="{ parentDimensions: transitioning }">
+            <a
+            :ref="image.name"
+            :href="'case-studies-' + image.name"
+            :class="['item-link', { 'item-transitioning': transitioning }]"
+            :style="'background-image: url(' + image.path + ')'"
+            @click.prevent="nextPage(image.name)">
+              <div class="item-content">
+                <h2 class="item-title">{{ image.label }}</h2>
+                <h3 class="item-subtitle">{{ image.sub }}</h3>
+              </div>
+            </a>
+          </article>
+        </client-only>
       </div>
     </section>
   </main>

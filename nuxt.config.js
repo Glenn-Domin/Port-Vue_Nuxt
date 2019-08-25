@@ -48,6 +48,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['gsap'],
     extend(config, ctx) {}
   },
   // TODO: Maybe there's a better way of hacking the props attribute to true?
