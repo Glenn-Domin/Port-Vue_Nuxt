@@ -15,6 +15,7 @@
     background: 0 0;
     color: inherit;
     transition: all .15s ease-in-out;
+    -webkit-box-shadow: 0 0 0 40px $dark inset !important; // Fix chrome bug
 
     &:focus {
       outline: 0;
@@ -58,4 +59,13 @@
   .was-validated .form-control:invalid ~ & {
     display: block;
   }
+}
+
+/* Fix chrome hack */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 40px $dark inset !important;
+  -webkit-text-fill-color: white !important;
 }
