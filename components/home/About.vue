@@ -35,10 +35,11 @@
       <h2 class="font-accent">Let's Talk.</h2>
       <span class="presentation-text" aria-hidden="true">Contact</span>
       <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field">
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="form-group">
           <input id="name" type="text" name="name" placeholder=" " class="form-control" required />
           <label for="name">Name</label>
