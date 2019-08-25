@@ -20,7 +20,9 @@
     </section>
     <shapes />
     <netlifyForm />
-    <about v-if="showModal" @close="showModal = false" />
+    <client-only>
+      <about v-if="showModal" @close="showModal = false" />
+    </client-only>
   </main>
 </template>
 
