@@ -107,9 +107,13 @@ export default {
 }
 </style>
 
-<style>
+<style lang="scss">
 .title {
-  font-size: 4rem;
+  font-size: 2.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 .subtitle {

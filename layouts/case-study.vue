@@ -45,10 +45,6 @@ export default {
     padding-top: .5rem;
   }
 }
-
-.tech-block {
-  margin-bottom: 60px;
-}
 </style>
 
 <style scoped>

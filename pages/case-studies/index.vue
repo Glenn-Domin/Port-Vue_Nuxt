@@ -91,12 +91,16 @@ export default {
 
   .item {
     display: block;
-    width: 80%;
-    height: 480px;
+    height: 320px;
     opacity: 1;
     background-color: $dark;
     box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     margin: 5rem auto;
+
+    @media (min-width: 768px) {
+      width: 80%;
+      height: 480px;
+    }
 
     &:nth-child(odd) {
       margin-left: 0;
@@ -149,20 +153,29 @@ export default {
 
 .item-content {
   position: absolute;
-  left: 90px;
-  right: 90px;
+  left: 6vw;
+  right: 6vw;
   bottom: 90px;
   color: #fff;
   z-index: 10;
   max-width: 650px;
   transform: scale(1) translateX(0);
   transition: transform .45s,opacity .25s;
+
+  @media (min-width: 768px) {
+    left: 90px;
+    right: 90px;
+  }
 }
 
 .item-title {
   margin-bottom: 0;
   font-family: League Spartan, Helvetica,Arial, sans-serif;
-  font-size: 3rem;
+  font-size: 1.75rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .item-subtitle {
