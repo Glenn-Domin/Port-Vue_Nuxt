@@ -50,7 +50,7 @@
             <code>{{codeJS}}</code>
             <p class="code-desc">Babel Translated for older browsers</p>
             <code>{{codeJSVerbose}}</code>
-            <p>Most of my JS is written in <a href="vue">VueJS</a> prjects.</p>
+            <p>Most of my JS is written in <a href="#vue">VueJS</a> prjects.</p>
             <h2 id="cms">Content Management Systems</h2>
             <h3 class="skills-heading" id="wp">
               <wordpress width="50" color="#32373c" />
@@ -95,14 +95,14 @@
               <li>BigCommerce</li>
             </ul>
             <h2>Frameworks</h2>
-            <h3 class="skills-heading" id="magento">
+            <h3 class="skills-heading" id="bootstrap">
               <bootstrap width="50" />
               Bootstrap
             </h3>
             <p>Bootstrap has been a staple in my projects since Bootstrap 3. It's customisation options are of a very high standard, their supplied code-snippets are semantic and accessible, and I completely reject the critisism that some devs will have about it, that all Bootstrap sites look alike.</p>
             <p>While some of their components could be improved (like allowing parent menu items to actually be links), I'd say it's almost perfect.</p>
             <p>We'll always use the SCSS implementation on every project.</p>
-            <h3 class="skills-heading" id="magento">
+            <h3 class="skills-heading" id="vue">
               <vuejs width="50" />
               VueJS
             </h3>
@@ -127,6 +127,13 @@
                     <li><a href="#magento">Magento</a></li>
                     <li><a href="#joomla">Joomla</a></li>
                     <li><a href="#cmsothers">Others</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#frameworks">Frameworks</a>
+                  <ul>
+                    <li><a href="#bootstrap">Bootstrap</a></li>
+                    <li><a href="#vue">VueJS</a></li>
                   </ul>
                 </li>
               </ul>
