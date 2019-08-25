@@ -4,15 +4,10 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Glenn Domin | Portfolio',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -29,7 +24,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: '~/components/loading.vue',
+  loadingIndicator: '~/loading.html',
   /*
    ** Global CSS
    */
@@ -58,7 +53,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    transpile: ['gsap'],
     extend(config, ctx) {}
   },
   // TODO: Maybe there's a better way of hacking the props attribute to true?
