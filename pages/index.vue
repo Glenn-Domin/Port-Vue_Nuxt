@@ -19,6 +19,7 @@
       <button class="btn" @click="showModal = true">About Me</button>
     </section>
     <shapes />
+    <netlifyForm />
     <about v-if="showModal" @close="showModal = false" />
   </main>
 </template>
@@ -26,12 +27,14 @@
 <script>
 import shapes from '~/components/global/Shapes'
 import about from '~/components/home/About'
+import netlifyForm from '~/static/form'
 
 export default {
   layout: 'default',
   components: {
     shapes,
-    about
+    about,
+    netlifyForm
   },
   data() {
     return {
