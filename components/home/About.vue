@@ -38,15 +38,20 @@
         name="contact"
         method="post"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" />
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" />
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-        <button type="submit">Send</button>
+        data-netlify-honeypot="bot-field">
+        <div class="form-group">
+          <input id="name" type="text" name="name" placeholder=" " class="form-control" required />
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input id="email" type="email" name="email" placeholder=" " class="form-control" required />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder=" " class="form-control" required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn">Send</button>
       </form>
     </div>
   </div>

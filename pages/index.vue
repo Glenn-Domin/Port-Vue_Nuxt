@@ -37,6 +37,14 @@ export default {
     return {
       showModal: false
     }
+  },
+  watch: {
+    $route() {
+      this.showModal = this.$route.hash
+    }
+  },
+  mounted() {
+    this.showModal = this.$route.hash
   }
 }
 </script>

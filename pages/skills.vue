@@ -9,7 +9,7 @@
         <div class="row">
           <div class="skills content-big">
             <h2 id="thebasics">The Basics</h2>
-            <h3 class="skills-heading" id="html">
+            <h3 id="html" class="skills-heading">
               <html5 width="50"/>
               HTML
             </h3>
@@ -24,7 +24,7 @@
             <p class="code-desc">Bad Code</p>
             <code class="code-bad">{{codeBad}}</code>
             <p>There are a lot of traps that inexperienced developers fall in to. I won't.</p>
-            <h3 class="skills-heading" id="css">
+            <h3 id="css" class="skills-heading">
               <css width="50" />
               CSS
             </h3>
@@ -41,7 +41,7 @@
             <p class="code-desc">Problematic Alternative CSS</p>
             <code class="code-bad">{{codeCSSBad}}</code>
             <p>We'll always use <strong>SCSS</strong> in projects.</p>
-            <h3 class="skills-heading" id="js">
+            <h3 id="js" class="skills-heading">
               <javascript width="50" />
               JavaScript
             </h3>
@@ -52,7 +52,7 @@
             <code>{{codeJSVerbose}}</code>
             <p>Most of my JS is written in <a href="#vue">VueJS</a> prjects.</p>
             <h2 id="cms">Content Management Systems</h2>
-            <h3 class="skills-heading" id="wp">
+            <h3 id="wp" class="skills-heading">
               <wordpress width="50" color="#32373c" />
               WordPress
             </h3>
@@ -72,7 +72,7 @@
               <li>Use standards-based SCSS/Bootstrap, as well as WP templates.</li>
               <li>Make it harder for the client to break and keep logs to say who did what in the back-end.</li>
             </ul>
-            <h3 class="skills-heading" id="magento">
+            <h3 id="magento" class="skills-heading">
               <magento width="50" />
               Magento
             </h3>
@@ -80,7 +80,7 @@
             <p>We've been using a docker container for setting up a dev environment but I think there's more to investigate performance-wise for ease of development.</p>
             <p>We've eschewed the default Magento LESS functionality for SCSS and Bootstrap, with the noteable exceptions of layout and buttons (sort of).</p>
             <p>I'm fairly confident with the Magento front-end, though there are some things in the XML and JS arenas where I need to learn more about the Magento way of doing things. I'm undertaking certified Magento training to accomplish this.</p>
-            <h3 class="skills-heading" id="magento">
+            <h3 id="joomla" class="skills-heading">
               <joomla width="50" />
               Joomla
             </h3>
@@ -95,14 +95,14 @@
               <li>BigCommerce</li>
             </ul>
             <h2>Frameworks</h2>
-            <h3 class="skills-heading" id="bootstrap">
+            <h3 id="bootstrap" class="skills-heading">
               <bootstrap width="50" />
               Bootstrap
             </h3>
             <p>Bootstrap has been a staple in my projects since Bootstrap 3. It's customisation options are of a very high standard, their supplied code-snippets are semantic and accessible, and I completely reject the critisism that some devs will have about it, that all Bootstrap sites look alike.</p>
             <p>While some of their components could be improved (like allowing parent menu items to actually be links), I'd say it's almost perfect.</p>
             <p>We'll always use the SCSS implementation on every project.</p>
-            <h3 class="skills-heading" id="vue">
+            <h3 id="vue" class="skills-heading">
               <vuejs width="50" />
               VueJS
             </h3>
