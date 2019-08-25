@@ -16,8 +16,15 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preload', as: 'font', crossorigin: 'crossorigin', type: 'font/woff2', href: '~static/fonts/leaguespartan-bold-webfont.woff2' }
+      { rel: 'preload', as: 'font', crossorigin: 'crossorigin', type: 'font/woff2', href: '/fonts/leaguespartan-bold-webfont.woff2' }
     ]
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['~static/fonts/leaguespartan-bold-webfont.woff2'].includes(type)
+      }
+    }
   },
   /*
    ** Customize the progress-bar color
