@@ -9,6 +9,9 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
+    htmlAttrs: {
+      lang: 'en-au',
+    },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preload', as: 'font', crossorigin: 'crossorigin', type: 'font/woff2', href: '/fonts/leaguespartan-bold-webfont.woff2' }
