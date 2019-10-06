@@ -35,6 +35,13 @@
                     <li><a href="#vue">VueJS</a></li>
                   </ul>
                 </li>
+                <li>
+                  <a href="#accreditations">Accreditations</a>
+                  <ul>
+                    <li><a href="#accreditations">AWS</a></li>
+                    <li><a href="#accreditations">Magento 2</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </aside>
@@ -60,7 +67,7 @@
               CSS
             </h3>
             <p>There are right ways and wrong ways to write CSS. I see plenty of people list CSS as a skill on their résumé, but their code just screams "technical debt" or "code smell".</p>
-            <p>I've developed developer guides at my current agency to steer other devs toward a sensible approach.</p>
+            <p>I've written developer guides at my current agency to steer other devs toward a sensible approach.</p>
             <p><strong>Example</strong>: we've done a lot of styling with Functional CSS (i.e., using lots of re-usable helper classes). This became unwieldy when we had to add many classes to a single element (observant readers will recognise the use of Bootstrap's utility classes).</p>
             <p class="code-desc">Functional CSS</p>
             <code>{{codeFunctional}}</code>
@@ -110,7 +117,7 @@
             <p>I've worked on quite a lot of Magento sites (some Magento 1 but mostly Magento 2) sites over the years, my poster-child for which is <nuxt-link class="nav-link" to="case-studies/tus">Total Uniform Solutions</nuxt-link>.</p>
             <p>We've been using a docker container for setting up a dev environment but I think there's more to investigate performance-wise for ease of development.</p>
             <p>We've eschewed the default Magento LESS functionality for SCSS and Bootstrap, with the noteable exceptions of layout and buttons (sort of).</p>
-            <p>I'm fairly confident with the Magento front-end, though there are some things in the XML and JS arenas where I need to learn more about the Magento way of doing things. I'm undertaking certified Magento training to accomplish this.</p>
+            <p>I'm fairly confident with the Magento front-end, though there are some things in the XML and JS arenas where I need to learn more about the Magento way of doing things. I've completed certified <a href="https://u.magento.com/certification/directory/dev/3340373" target="_blank" rel="noreferrer">M2 Front End Developer</a> training to accomplish this.</p>
             <h3 id="joomla" class="skills-heading">
               <joomla width="50" height="50.39" />
               Joomla
@@ -124,6 +131,7 @@
               <li>Shopify</li>
               <li>Drupal</li>
               <li>BigCommerce</li>
+              <li>Neato</li>
             </ul>
             <h2>Frameworks</h2>
             <h3 id="bootstrap" class="skills-heading">
@@ -138,6 +146,13 @@
               VueJS
             </h3>
             <p>I've used VueJS as the JS framework in a few very large, data-heavy projects, one of which is e-commerce and I find it's a great way to lay out a project in a simple way.</p>
+            <p>We tend to pair VueJS with a Laravel back-end and it works well.</p>
+            <h2 id="accreditations">Accreditations</h2>
+            <p><em>Only internationally recognised accreditations are included.</em></p>
+            <ul>
+              <li><a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=MFM07HQ121R11GCT" target="_blank" rel="noreferrer">AWS Certified Cloud Practitioner</a></li>
+              <li><a href="https://u.magento.com/certification/directory/dev/3340373/" target="_blank" rel="noreferrer">Magento 2 Front End Developer</a></li>
+            </ul>
           </div>
         </div>
       </div>
