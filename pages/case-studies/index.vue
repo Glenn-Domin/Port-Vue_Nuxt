@@ -37,13 +37,13 @@ export default {
       images: [{
           name: 'campdraft-one',
           label: 'Campdraft One',
-          sub: 'Back-end management system.',
+          sub: 'VueJS/Laravel Back-end management system.',
           path: require('~/static/images/cd-lg-op.jpg')
         },
         {
           name: 'campdraft',
           label: 'Australian Campdrafting Association',
-          sub: 'Public-facing site.',
+          sub: 'WordPress Public-facing site.',
           path: require('~/static/images/cd4-lg-op.jpg')
       },
         {
@@ -51,6 +51,12 @@ export default {
           label: 'Total Uniform Solutions',
           sub: 'Magento multi-store e-commerce site.',
           path: require('~/static/images/tus-lg-op.jpg')
+      },
+        {
+          name: 'louenhide',
+          label: 'Louenhide',
+          sub: 'WooCommerce e-commerce site.',
+          path: require('~/static/images/lh-lg-op.jpg')
       }],
       transitioning: false,
       parentDimensions: null

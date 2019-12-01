@@ -56,7 +56,7 @@
               <cite>Most people</cite>
             </blockquote>
             <p>I don't mean what most people mean when they say "I know HTML".</p>
-            <p>What I mean is not only what HTML tags are available and how to lay them out, I also know why you should be concerned about <strong>Semantic HTML</strong> and <strong>Accessibility</strong>, as well as what do to about it.</p>
+            <p>What I mean is not only what HTML tags are available and how to use them appropriately, I also know why you should be concerned about <strong>Semantic HTML</strong> and <strong>Accessibility</strong>, as well as what do to about it.</p>
             <p class="code-desc">Semantic Code</p>
             <code class="code-good">{{codeGood}}</code>
             <p class="code-desc">Bad Code</p>
