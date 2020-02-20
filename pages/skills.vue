@@ -12,7 +12,7 @@
             <nav>
               <ul>
                 <li>
-                  <a href="#thebasics">The Basics</a>
+                  <a href="#thebasics">"The Basics"</a>
                   <ul>
                     <li><a href="#html">HTML</a></li>
                     <li><a href="#css">CSS</a></li>
@@ -46,21 +46,41 @@
             </nav>
           </aside>
           <div class="content-big">
-            <h2 id="thebasics">The Basics</h2>
+            <h2 id="thebasics">"The Basics"</h2>
             <h3 id="html" class="skills-heading">
               <html5 width="50" height="66.66" />
               HTML
             </h3>
-            <blockquote>
-              "I know HTML"
-              <cite>Most people</cite>
-            </blockquote>
+            <figure class="blockquote-container">
+              <blockquote>
+                "I know HTML"
+              </blockquote>
+              <figcaption>Most people</figcaption>
+            </figure>
             <p>I don't mean what most people mean when they say "I know HTML".</p>
-            <p>What I mean is not only what HTML tags are available and how to use them appropriately, I also know why you should be concerned about <strong>Semantic HTML</strong> and <strong>Accessibility</strong>, as well as what do to about it.</p>
-            <p class="code-desc">Semantic Code</p>
-            <code class="code-good">{{codeGood}}</code>
-            <p class="code-desc">Bad Code</p>
-            <code class="code-bad">{{codeBad}}</code>
+            <p>What I mean is not only what HTML tags are available and how to use them appropriately.</p>
+            <p>Take my <code class="code-inline">blockquote</code> example above. Most People™ might consider the following correct from MDN:</p>
+            <figure>
+              <figcaption class="code-desc">MDN Example (at time of writing): Incorrect</figcaption>
+              <code class="code-bad">{{codeMDNBlockquote}}</code>
+            </figure>
+            <p>Or perhaps the following from Bootstrap:</p>
+            <figure>
+              <figcaption class="code-desc">Bootstrap Example (at time of writing): Incorrect</figcaption>
+              <code class="code-bad">{{codeBootstrapBlockquote}}</code>
+            </figure>
+            <p>Both of these are incorrect because as <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element" target="_blank">the spec</a> says, <q cite="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">Attribution for the quotation, if any, must be placed outside the blockquote element</q>. I currently have a GitHub Pull Request to fix this in Bootstrap which is in their list of inclusions for version 5, as well as a GitHub issue for MDN.</p>
+            <p>I did the research to ensure I was using valid HTML, rather than the majority of developers, who would simply defer to the judgement of the (admittedly very reputable) MDN and Bootstrap.</p>
+            <p>I also know why you should be concerned about <strong>Semantic HTML</strong> and <strong>Accessibility</strong>, as well as what do to about it.</p>
+
+            <figure>
+              <figcaption class="code-desc">Semantic Code</figcaption>
+              <code class="code-good">{{codeGood}}</code>
+            </figure>
+            <figure>
+              <figcaption class="code-desc">Bad Code</figcaption>
+              <code class="code-bad">{{codeBad}}</code>
+            </figure>
             <p>There are a lot of traps that inexperienced developers fall in to. I won't.</p>
             <h3 id="css" class="skills-heading">
               <css width="50" height="50" />
@@ -69,25 +89,37 @@
             <p>There are right ways and wrong ways to write CSS. I see plenty of people list CSS as a skill on their résumé, but their code just screams "technical debt" or "code smell".</p>
             <p>I've written developer guides at my current agency to steer other devs toward a sensible approach.</p>
             <p><strong>Example</strong>: we've done a lot of styling with Functional CSS (i.e., using lots of re-usable helper classes). This became unwieldy when we had to add many classes to a single element (observant readers will recognise the use of Bootstrap's utility classes).</p>
-            <p class="code-desc">Functional CSS</p>
-            <code>{{codeFunctional}}</code>
+            <figure>
+              <figcaption class="code-desc">Functional CSS</figcaption>
+              <code>{{codeFunctional}}</code>
+            </figure>
             <p>To remedy this, I came up with a system of selective abstraction. If you're using the same list of classes for multiple elements (like a series of list tags) or if you have more than five utility classes on the same element, it's time to abstract these classes into components (extra points if the component is re-usable, so code-bases don't balloon in size).</p>
-            <p class="code-desc">Abstracted HTML</p>
-            <code class="code-good">{{codeWClass}}</code>
-            <p class="code-desc">Associated CSS</p>
-            <code class="code-good">{{codeCSSGood}}</code>
-            <p class="code-desc">Problematic Alternative CSS</p>
-            <code class="code-bad">{{codeCSSBad}}</code>
+            <figure>
+              <p class="code-desc">Abstracted HTML</p>
+              <code class="code-good">{{codeWClass}}</code>
+            </figure>
+            <figure>
+              <figcaption class="code-desc">Associated CSS</figcaption>
+              <code class="code-good">{{codeCSSGood}}</code>
+            </figure>
+            <figure>
+              <figcaption class="code-desc">Problematic Alternative CSS</figcaption>
+              <code class="code-bad">{{codeCSSBad}}</code>
+            </figure>
             <p>We'll always use <strong>SCSS</strong> in projects.</p>
             <h3 id="js" class="skills-heading">
               <javascript width="50" height="57.13" />
               JavaScript
             </h3>
             <p>To keep code tidy, in projects using Babel, I've kept to more advanced JS concepts (ES6+) for brevity and clarity. It's important to only do this in Babel projects so you can have this code converted in to formats that older browsers can read.</p>
-            <p class="code-desc">Succinct Destructuring Example</p>
-            <code>{{codeJS}}</code>
-            <p class="code-desc">Babel Translated for older browsers</p>
-            <code>{{codeJSVerbose}}</code>
+            <figure>
+              <p class="code-desc">Succinct Destructuring Example</p>
+              <code>{{codeJS}}</code>
+            </figure>
+            <figure>
+              <p class="code-desc">Babel Translated for older browsers</p>
+              <code>{{codeJSVerbose}}</code>
+            </figure>
             <p>Most of my JS is written in <a href="#vue">VueJS</a> prjects.</p>
             <h2 id="cms">Content Management Systems</h2>
             <h3 id="wp" class="skills-heading">
@@ -183,6 +215,14 @@ export default {
   },
   data() {
     return {
+      codeMDNBlockquote: `<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>`,
+      codeBootstrapBlockquote: `<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>`,
       codeGood: `<article>
   <header>
     <h1>Article Heading</h1>
@@ -305,5 +345,10 @@ code {
 .code-desc {
   margin-bottom: 0;
   font-weight: 500;
+}
+
+.code-inline {
+  display: inline;
+  padding: 3px 5px;
 }
 </style>

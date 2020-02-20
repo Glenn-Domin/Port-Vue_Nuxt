@@ -2,7 +2,7 @@
   <main class="container above-fold">
     <section>
       <h1 class="title">Glenn Domin</h1>
-      <h2 class="subtitle">A Front-end developer who makes websites 
+      <p class="subtitle">A Front-end developer who makes websites 
         <ul>
           <li>semantic</li>
           <li>performant</li>
@@ -15,7 +15,7 @@
           <li>standards-compliant</li>
           <li>bullet-proof</li>
         </ul>
-      </h2>
+      </p>
       <button class="btn" @click="showModal = true">About Me</button>
     </section>
     <shapes />

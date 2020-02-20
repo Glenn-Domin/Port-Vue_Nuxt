@@ -10,11 +10,11 @@
   background: white;
 }
 
-blockquote {
+.blockquote-container {
   background-color: $light;
   padding: 1rem 1.25rem;
 
-  cite {
+  figcaption {
     display: block;
     font-size: .875rem;
 
