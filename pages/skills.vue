@@ -59,15 +59,15 @@
             </figure>
             <p>I don't mean what most people mean when they say "I know HTML".</p>
             <p>What I mean is not only what HTML tags are available and how to use them appropriately.</p>
-            <p>Take my <code class="code-inline">blockquote</code> example above. Most People™ might consider the following correct from MDN:</p>
+            <p>Take my <pre v-highlightjs class="code-inline"><code class="code-html">blockquote</code></pre> above for example and compare it to the following. Most People™ might consider this correct from MDN:</p>
             <figure>
               <figcaption class="code-desc">MDN Example (at time of writing): Incorrect</figcaption>
-              <code class="code-bad">{{codeMDNBlockquote}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeMDNBlockquote}}</code></pre>
             </figure>
             <p>Or perhaps the following from Bootstrap:</p>
             <figure>
               <figcaption class="code-desc">Bootstrap Example (at time of writing): Incorrect</figcaption>
-              <code class="code-bad">{{codeBootstrapBlockquote}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeBootstrapBlockquote}}</code></pre>
             </figure>
             <p>Both of these are incorrect because as <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element" target="_blank">the spec</a> says, <q cite="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">Attribution for the quotation, if any, must be placed outside the blockquote element</q>. I currently have a GitHub Pull Request to fix this in Bootstrap which is in their list of inclusions for version 5, as well as a GitHub issue for MDN.</p>
             <p>I did the research to ensure I was using valid HTML, rather than the majority of developers, who would simply defer to the judgement of the (admittedly very reputable) MDN and Bootstrap.</p>
@@ -75,11 +75,11 @@
 
             <figure>
               <figcaption class="code-desc">Semantic Code</figcaption>
-              <code class="code-good">{{codeGood}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeGood}}</code></pre>
             </figure>
             <figure>
               <figcaption class="code-desc">Bad Code</figcaption>
-              <code class="code-bad">{{codeBad}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeBad}}</code></pre>
             </figure>
             <p>There are a lot of traps that inexperienced developers fall in to. I won't.</p>
             <h3 id="css" class="skills-heading">
@@ -91,20 +91,20 @@
             <p><strong>Example</strong>: we've done a lot of styling with Functional CSS (i.e., using lots of re-usable helper classes). This became unwieldy when we had to add many classes to a single element (observant readers will recognise the use of Bootstrap's utility classes).</p>
             <figure>
               <figcaption class="code-desc">Functional CSS</figcaption>
-              <code>{{codeFunctional}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeFunctional}}</code></pre>
             </figure>
             <p>To remedy this, I came up with a system of selective abstraction. If you're using the same list of classes for multiple elements (like a series of list tags) or if you have more than five utility classes on the same element, it's time to abstract these classes into components (extra points if the component is re-usable, so code-bases don't balloon in size).</p>
             <figure>
               <p class="code-desc">Abstracted HTML</p>
-              <code class="code-good">{{codeWClass}}</code>
+              <pre v-highlightjs><code class="lang-html">{{codeWClass}}</code></pre>
             </figure>
             <figure>
               <figcaption class="code-desc">Associated CSS</figcaption>
-              <code class="code-good">{{codeCSSGood}}</code>
+              <pre v-highlightjs><code>{{codeCSSGood}}</code></pre>
             </figure>
             <figure>
               <figcaption class="code-desc">Problematic Alternative CSS</figcaption>
-              <code class="code-bad">{{codeCSSBad}}</code>
+              <pre v-highlightjs><code>{{codeCSSBad}}</code></pre>
             </figure>
             <p>We'll always use <strong>SCSS</strong> in projects.</p>
             <h3 id="js" class="skills-heading">
@@ -114,11 +114,11 @@
             <p>To keep code tidy, in projects using Babel, I've kept to more advanced JS concepts (ES6+) for brevity and clarity. It's important to only do this in Babel projects so you can have this code converted in to formats that older browsers can read.</p>
             <figure>
               <p class="code-desc">Succinct Destructuring Example</p>
-              <code>{{codeJS}}</code>
+              <pre v-highlightjs><code>{{codeJS}}</code></pre>
             </figure>
             <figure>
               <p class="code-desc">Babel Translated for older browsers</p>
-              <code>{{codeJSVerbose}}</code>
+              <pre v-highlightjs><code>{{codeJSVerbose}}</code></pre>
             </figure>
             <p>Most of my JS is written in <a href="#vue">VueJS</a> prjects.</p>
             <h2 id="cms">Content Management Systems</h2>
@@ -193,6 +193,12 @@
 </template>
 
 <script>
+import 'highlight.js/scss/a11y-dark.scss'
+import Vue from 'vue'
+import hljs from 'highlight.js/lib/highlight'
+import langscss from 'highlight.js/lib/languages/scss'
+import langhtml from 'highlight.js/lib/languages/xml'
+import langjs from 'highlight.js/lib/languages/javascript'
 import html5 from '~/components/global/shapes/HTML'
 import css from '~/components/global/shapes/CSS'
 import javascript from '~/components/global/shapes/Javascript'
@@ -201,6 +207,36 @@ import magento from '~/components/global/shapes/Magento'
 import joomla from '~/components/global/shapes/Joomla'
 import bootstrap from '~/components/global/shapes/Bootstrap'
 import vuejs from '~/components/global/shapes/Vue'
+
+hljs.registerLanguage('lang-scss', langscss)
+hljs.registerLanguage('lang-html', langhtml)
+hljs.registerLanguage('lang-js', langjs)
+
+Vue.directive('highlightjs', {
+  deep: true,
+  bind: (el, binding) => {
+    // on first bind, highlight all targets
+    const targets = el.querySelectorAll('code')
+    targets.forEach((target) => {
+      // if a value is directly assigned to the directive, use this
+      // instead of the element content.
+      if (binding.value) {
+        target.textContent = binding.value
+      }
+      hljs.highlightBlock(target)
+    })
+  },
+  componentUpdated: (el, binding) => {
+    // after an update, re-fill the content and then highlight
+    const targets = el.querySelectorAll('code')
+    targets.forEach((target) => {
+      if (binding.value) {
+        target.textContent = binding.value
+        hljs.highlightBlock(target)
+      }
+    })
+  }
+})
 
 export default {
   components: {
@@ -324,22 +360,7 @@ _numbers;`
 }
 
 code {
-  display: block;
-  white-space: pre;
-  overflow-y: auto;
-  margin-bottom: 1rem;
-  padding: 1rem;
   font-size: .875rem;
-  background-color: $dark;
-  color: $accent;
-
-  &.code-good {
-    color: #40d640;
-  }
-
-  &.code-bad {
-    color: #ff3f3f;
-  }
 }
 
 .code-desc {
@@ -348,7 +369,10 @@ code {
 }
 
 .code-inline {
-  display: inline;
   padding: 3px 5px;
+
+  &, code {
+    display: inline;
+  }
 }
 </style>
