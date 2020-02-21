@@ -58,8 +58,8 @@
               <figcaption>Most people</figcaption>
             </figure>
             <p>I don't mean what most people mean when they say "I know HTML".</p>
-            <p>What I mean is not only what HTML tags are available and how to use them appropriately.</p>
-            <p>Take my <pre v-highlightjs class="code-inline"><code class="code-html">blockquote</code></pre> above for example and compare it to the following. Most People™ might consider this correct from MDN:</p>
+            <p>What I mean is not only what HTML tags are available but also how to use them appropriately.</p>
+            <p>Take my <pre v-highlightjs class="code-inline"><code class="code-html">blockquote</code></pre> above for example and compare it to the following. Most people might consider this correct from MDN:</p>
             <figure>
               <figcaption class="code-desc">MDN Example (at time of writing): Incorrect</figcaption>
               <pre v-highlightjs><code class="lang-html">{{codeMDNBlockquote}}</code></pre>
