@@ -21,12 +21,14 @@
     <shapes />
     <netlifyForm />
     <about v-if="showModal" @close="showModal = false" />
+    <particles />
   </main>
 </template>
 
 <script>
 import shapes from '~/components/global/Shapes'
 import about from '~/components/home/About'
+import particles from '~/components/home/Particles'
 import netlifyForm from '~/static/form'
 
 export default {
@@ -34,6 +36,7 @@ export default {
   components: {
     shapes,
     about,
+    particles,
     netlifyForm
   },
   data() {
