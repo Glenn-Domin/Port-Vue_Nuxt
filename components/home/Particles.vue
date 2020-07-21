@@ -103,7 +103,6 @@ setTimeout(() => {
 
   function changeImage() {
     currentIndex = currentIndex < 1 ? images.length - 1 : currentIndex - 1
-    console.log(particles)
     image.src = images[currentIndex]
   }
 
