@@ -19,10 +19,12 @@ export default {
     let scene
     let camera
     const images = [
-      require('~/static/images/icon-code.png'),
-      require('~/static/images/icon-terminal.png'),
+      require('~/static/images/icon-brackets.png'),
       require('~/static/images/icon-css.png'),
-      require('~/static/images/icon-js.png')
+      require('~/static/images/icon-js.png'),
+      require('~/static/images/icon-terminal.png'),
+      require('~/static/images/icon-bracketsCurly.png'),
+      require('~/static/images/icon-code.png')
     ]
     let currentIndex = images.length - 1
     let particles
