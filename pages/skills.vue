@@ -365,7 +365,15 @@ _numbers;`
   aside {
     margin-left: 0;
 
-    @media (min-width: 768px) {
+    @media (max-width: 1023px) {
+      flex: 0 1 600px;
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+    }
+
+    @media (min-width: 1024px) {
       order: 1;
     }
   }
