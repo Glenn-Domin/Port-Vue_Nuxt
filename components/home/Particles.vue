@@ -11,7 +11,7 @@ export default {
   computed: {
     viewportWidth() {
       const vWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-      return vWidth >= 1440 ? 1200 : 800
+      return vWidth >= 900 ? 1200 : 900
     }
   },
   mounted() {
@@ -161,7 +161,7 @@ export default {
   left: 50%;
   opacity: 0.6;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 900px) {
     width: 1200px;
     height: 1200px;
   }
