@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <navbar />
+    <navbar v-if="isAble" />
     <nuxt />
   </div>
 </template>
@@ -11,6 +11,11 @@ import navbar from '~/components/global/Navbar'
 export default {
   components: {
     navbar
+  },
+  data() {
+    return {
+      isAble: window.NodeList && NodeList.prototype.forEach
+    }
   }
 }
 </script>

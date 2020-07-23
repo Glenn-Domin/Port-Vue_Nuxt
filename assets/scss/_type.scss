@@ -1,11 +1,12 @@
 
 ::selection {
-  background: #1c1d25;
+  background: rgba($accent, 0.7);
   color: #f3f3f3;
   text-shadow: none;
 }
 
-h1, .font-accent {
+.font-accent,
+.page-heading .title {
   font-family: $font-family-accent;
 }
 

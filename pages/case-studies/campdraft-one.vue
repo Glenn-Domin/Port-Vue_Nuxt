@@ -2,7 +2,7 @@
   <article class="case-content container">
     <above-fold :style="'background-image: url(' + banner + ')'">
       <h1 slot="heading" class="item-title">Campdraft One</h1>
-      <h2 slot="subheading" class="item-subtitle">Back-end management system.</h2>
+      <h2 slot="subheading" class="item-subtitle">VueJS/Laravel Back-end management system.</h2>
     </above-fold>
     <section id="content" class="row content">
       <div class="content-small">

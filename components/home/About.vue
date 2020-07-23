@@ -1,7 +1,7 @@
 <template>
   <div :class="['modal modal-about', mountedClass]" tabindex="-1" role="dialog">
     <button aria-label="Close" class="close" @click="closeModal()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="25" height="40"><path fill="#fff" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="25" height="40"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
     </button>
     <div class="about">
       <h2 class="font-accent">About Me.</h2>
@@ -24,6 +24,10 @@
         <li>
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="26.59"><path fill="currentColor" d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"/></svg>
           Tricky CSS problems and browser compliance
+        </li>
+        <li>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69" width="20" height="17.31"><path d="M161.096.001l-30.224 52.35L100.647.002H-.005L130.872 226.69 261.749 0z" fill="#9e9e9e"/><path d="M161.096.001l-30.224 52.35L100.647.002H52.346l78.526 136.01L209.398.001z" fill="currentColor"/></svg>
+          Advanced JS Framework builds
         </li>
         <li>
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="17.77"><path fill="currentColor" d="M228.5 511.8l-25-7.1c-3.2-.9-5-4.2-4.1-7.4L340.1 4.4c.9-3.2 4.2-5 7.4-4.1l25 7.1c3.2.9 5 4.2 4.1 7.4L235.9 507.6c-.9 3.2-4.3 5.1-7.4 4.2zm-75.6-125.3l18.5-20.9c1.9-2.1 1.6-5.3-.5-7.1L49.9 256l121-102.5c2.1-1.8 2.4-5 .5-7.1l-18.5-20.9c-1.8-2.1-5-2.3-7.1-.4L1.7 252.3c-2.3 2-2.3 5.5 0 7.5L145.8 387c2.1 1.8 5.3 1.6 7.1-.5zm277.3.4l144.1-127.2c2.3-2 2.3-5.5 0-7.5L430.2 125.1c-2.1-1.8-5.2-1.6-7.1.4l-18.5 20.9c-1.9 2.1-1.6 5.3.5 7.1l121 102.5-121 102.5c-2.1 1.8-2.4 5-.5 7.1l18.5 20.9c1.8 2.1 5 2.3 7.1.4z"/></svg>
@@ -96,14 +100,22 @@ export default {
 
     svg {
       flex-shrink: 0;
-      margin-top: .1rem;
+      margin-top: 0;
+      margin-bottom: 0.1rem;
       margin-right: 1rem;
     }
   }
 }
 
 .modal {
-  display: flex;
+
+  @media (max-width: 767px) {
+    overflow-y: scroll;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
   .close {
     opacity: 0;
@@ -113,6 +125,7 @@ export default {
     position: absolute;
     z-index: -1;
     font-family: $font-family-accent;
+    font-weight: 700;
     font-size: 190px;
     opacity: 0.05;
     line-height: 1;
@@ -162,6 +175,10 @@ export default {
 
       &:focus {
         opacity: 1;
+      }
+
+      @media (min-width: 768px) {
+        color: white;
       }
     }
 

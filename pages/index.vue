@@ -1,8 +1,8 @@
 <template>
-  <main class="container above-fold">
-    <section>
+  <main class="container home">
+    <section class="home-section">
       <h1 class="title">Glenn Domin</h1>
-      <p class="subtitle">A Front-end developer who makes websites 
+      <p class="subtitle">A Senior Front-End Developer who makes websites 
         <ul>
           <li>semantic</li>
           <li>performant</li>
@@ -16,31 +16,39 @@
           <li>bullet-proof</li>
         </ul>
       </p>
-      <button class="btn" @click="showModal = true">About Me</button>
+      <div class="text-center">
+        <button class="btn" @click="showModal = true">About Me</button>
+      </div>
+      <div v-if="!isAble" style="margin-top: 20px;">
+        Hi! I'm so glad you're visiting my wonderful portfolio site. <br>
+        I wish you'd visit using a wonderful browser. <br>
+        There are features I'd love to show you if only you'd visit using 
+        Chrome, Firefox, Edge, Safari, or any other <a href="https://www.techopedia.com/definition/31094/evergreen-browser" target="_blank" rel="noreferrer">Evergreen browser</a>.
+      </div>
     </section>
-    <shapes />
     <netlifyForm />
     <about v-if="showModal" @close="showModal = false" />
-    <particles />
+    <particles v-if="isAble" />
   </main>
 </template>
 
 <script>
-import shapes from '~/components/global/Shapes'
 import about from '~/components/home/About'
-import particles from '~/components/home/Particles'
 import netlifyForm from '~/static/form'
+const particles = () => window.NodeList && NodeList.prototype.forEach
+  ? import('~/components/home/Particles.vue')
+  : false
 
 export default {
   layout: 'default',
   components: {
-    shapes,
     about,
-    particles,
-    netlifyForm
+    netlifyForm,
+    particles
   },
   data() {
     return {
+      isAble: window.NodeList && NodeList.prototype.forEach,
       showModal: false
     }
   },
@@ -56,11 +64,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.above-fold {
+.home {
   margin: auto;
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items:center;
+  justify-content: center;
   color: white;
   position: fixed;
   top: 0;
@@ -68,10 +76,40 @@ export default {
   left: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+
+  .btn {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+}
+
+.home-section {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.title {
+  text-transform: uppercase;
+  line-height: 1;
+
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 8rem;
+  }
 }
 
 .subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+
+  @media (min-width: 768px) {
+    text-align: center;
+    margin: -14px 0 1.5rem 90px;
+  }
 
   ul {
     display: inline-block;
@@ -82,6 +120,7 @@ export default {
     vertical-align: top;
     overflow: hidden;
     height: 2rem;
+    text-align: left;
 
     &::after {
       content: 'semantic';
@@ -112,17 +151,12 @@ export default {
 
 <style lang="scss">
 .title {
-  font-size: 2.5rem;
-
-  @media (min-width: 768px) {
-    font-size: 4rem;
-  }
+  margin: 0;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 .subtitle {
-  margin-bottom: 1.75rem;
-  font-style: italic;
   font-weight: 400;
-  font-size: 1.25rem;
 }
 </style>

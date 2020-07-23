@@ -6,7 +6,12 @@
           "@babel/preset-env",
           {
             "targets": {
-              "node": "current"
+              "node": "current",
+              "browsers": [
+                "> 2% in AU",
+                "not dead",
+                "not IE_Mob 11"
+              ]
             }
           }
         ]

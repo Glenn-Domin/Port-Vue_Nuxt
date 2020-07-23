@@ -154,7 +154,6 @@ export default {
 .case-listing {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background: white;
 }
 
 .item-content {
@@ -176,7 +175,7 @@ export default {
 
 .item-title {
   margin-bottom: 0;
-  font-family: League Spartan, Helvetica,Arial, sans-serif;
+  font-family:  'League Spartan', Helvetica,Arial, sans-serif;
   font-size: 1.75rem;
 
   @media (min-width: 768px) {
@@ -185,7 +184,6 @@ export default {
 }
 
 .item-subtitle {
-  font-style: italic;
   font-weight: 400;
   font-size: 1rem;
 }
