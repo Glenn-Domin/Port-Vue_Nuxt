@@ -165,7 +165,7 @@
               <li>BigCommerce</li>
               <li>Neato</li>
             </ul>
-            <h2>Frameworks</h2>
+            <h2 id="frameworks">Frameworks</h2>
             <h3 id="bootstrap" class="skills-heading">
               Bootstrap
               <bootstrap width="25" height="25" />
@@ -395,7 +395,11 @@ _numbers;`
       align-items: center;
       box-shadow: none !important;
       border: none;
-      color: $primary;
+      color: $white;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
 
       &::before {
         content: '';
@@ -406,10 +410,15 @@ _numbers;`
         background-size: contain;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FF0A78' height='16' width='16' viewBox='0 0 512 512'%3E%3Cpath d='M322.7,128.4L423,233.4c6,5.8,9,13.7,9,22.4c0,8.7-3,16.5-9,22.4L322.7,383.6c-11.9,12.5-31.3,12.5-43.2,0 c-11.9-12.5-11.9-32.7,0-45.2l48.2-50.4h-217C93.7,288,80,273.7,80,256c0-17.7,13.7-32,30.6-32h217l-48.2-50.4 c-11.9-12.5-11.9-32.7,0-45.2C291.4,115.9,310.7,115.9,322.7,128.4z'%3E%3C/path%3E%3C/svg%3E");
         transition: transform 0.2s;
+        margin-top: -4px;
       }
 
-      &:hover::before {
+      &:hover {
+        color: $primary;
+
+        &::before {
         transform: translateX(8px);
+      }
       }
     }
   }
