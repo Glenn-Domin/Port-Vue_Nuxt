@@ -1,9 +1,11 @@
 <template>
   <main>
-    <section class="page-heading">
-      <h1 class="title text-center">Skills</h1>
-      <h2 class="subtitle text-center">What can I do?</h2>
-    </section>
+    <header class="page-heading">
+      <hgroup>
+        <h1 class="title text-center">Skills</h1>
+        <h2 class="subtitle text-center">What can I do?</h2>
+      </hgroup>
+    </header>
     <section class="content">
       <div class="container">
         <div class="skills row">
