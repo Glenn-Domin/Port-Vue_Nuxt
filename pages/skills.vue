@@ -179,7 +179,7 @@
               VueJS
               <vuejs width="25" height="21.64" />
             </h3>
-            <p>I've used VueJS as the JS framework in a few very large, data-heavy projects, one of which is e-commerce and I find it's a great way to lay out a project in a simple way.</p>
+            <p>VueJS has been my JS framework of choice for very large, data-heavy projects, including e-commerce builds and I find it's a great way to lay out a project in a re-usable way.</p>
             <p>We tend to pair VueJS with a Laravel back-end and it works well.</p>
             <h2 id="accreditations">Accreditations</h2>
             <p><em>Only internationally recognised accreditations are included.</em></p>
