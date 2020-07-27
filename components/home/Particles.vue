@@ -30,45 +30,44 @@ export default {
     let particles
     let imgData = images[currentIndex]
     let loaded = false
+    const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+    const material = new THREE.PointsMaterial({
+      size: 2,
+      color: 0xE34F26,
+      sizeAttenuation: false
+    })
 
     const centerVector = new THREE.Vector3(0, 0, 0)
     const speed = 10
-    let isMouseDown = false
 
     const getImageData = (image) => {
-      const canvas = document.createElement('canvas')
       canvas.width = image.width
       canvas.height = image.height
-
-      const ctx = canvas.getContext('2d')
       ctx.drawImage(image, 0, 0)
-
       return ctx.getImageData(0, 0, image.width, image.height)
     }
 
     const drawTheMap = () => {
       const geometry = new THREE.Geometry()
-      const material = new THREE.PointsMaterial({
-        size: 2,
-        color: 0xE34F26,
-        sizeAttenuation: false
-      })
+
       for (let y = 0, y2 = imgData.height; y < y2; y += 2) {
         for (let x = 0, x2 = imgData.width; x < x2; x += 2) {
+          const rando = Math.random()
           if (imgData.data[x * 4 + y * 4 * imgData.width] < 64) {
             const vertex = new THREE.Vector3()
             vertex.x = x - imgData.width / 2
             vertex.y = -y + imgData.height / 2
-            vertex.z = -Math.random() * 500
+            vertex.z = -rando * 500
 
-            vertex.speed = Math.random() / speed + 0.015
+            vertex.speed = rando / speed + 0.015
 
             geometry.vertices.push(vertex)
           }
         }
       }
-      particles = new THREE.Points(geometry, material)
 
+      particles = new THREE.Points(geometry, material)
       scene.add(particles)
 
       if (!loaded) {
@@ -79,7 +78,6 @@ export default {
 
     const init = () => {
       scene = new THREE.Scene()
-
       if (!loaded) {
         renderer = new THREE.WebGLRenderer({
           canvas: document.getElementById('map'),
@@ -106,9 +104,6 @@ export default {
 
       imgData = getImageData(image)
       drawTheMap()
-
-      window.addEventListener('mouseup', onMouseup, false)
-      window.addEventListener('true', onMousedown, false)
     }
 
     function changeImage() {
@@ -116,24 +111,12 @@ export default {
       image.src = images[currentIndex]
     }
 
-    const onMouseup = () => {
-      isMouseDown = false
-    }
-
-    const onMousedown = () => {
-      isMouseDown = true
-    }
-
     const render = (a) => {
       requestAnimationFrame(render)
-
       particles.geometry.verticesNeedUpdate = true
-      if (!isMouseDown) {
-        camera.position.x += (0 - camera.position.x) * 0.04
-        camera.position.y += (0 - camera.position.y) * 0.04
-        camera.lookAt(centerVector)
-      }
-
+      camera.position.x += (0 - camera.position.x) * 0.05
+      camera.position.y += (0 - camera.position.y) * 0.05
+      camera.lookAt(centerVector)
       renderer.render(scene, camera)
     }
 
@@ -145,7 +128,7 @@ export default {
       setTimeout(() => {
         changeImage()
         loopImage()
-      }, 5000);
+      }, 5700);
     }
     loopImage()
   }
