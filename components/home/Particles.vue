@@ -19,15 +19,16 @@ export default {
     let scene
     let camera
     const images = [
-      require('~/static/images/icon-brackets.png'),
-      require('~/static/images/icon-css.png'),
-      require('~/static/images/icon-js.png'),
-      require('~/static/images/icon-terminal.png'),
-      require('~/static/images/icon-bracketsCurly.png'),
-      require('~/static/images/icon-code.png')
+      require('~/static/images/icon-brackets2.png'),
+      require('~/static/images/icon-js2.png'),
+      require('~/static/images/icon-css2.png'),
+      require('~/static/images/icon-bracketsCurly2.png'),
+      require('~/static/images/icon-code2.png'),
+      require('~/static/images/icon-terminal2.png')
     ]
     let currentIndex = images.length - 1
     let particles
+    const vertexes = []
     let imgData = images[currentIndex]
     let loaded = false
     const canvas = document.createElement('canvas')
@@ -50,19 +51,24 @@ export default {
 
     const drawTheMap = () => {
       const geometry = new THREE.Geometry()
+      let count = 0
 
       for (let y = 0, y2 = imgData.height; y < y2; y += 2) {
+        count = count + 1
         for (let x = 0, x2 = imgData.width; x < x2; x += 2) {
+          count = count + 1
+          if (!vertexes[count]) {
+            vertexes[count] = new THREE.Vector3()
+          }
           const rando = Math.random()
-          if (imgData.data[x * 4 + y * 4 * imgData.width] < 64) {
-            const vertex = new THREE.Vector3()
-            vertex.x = x - imgData.width / 2
-            vertex.y = -y + imgData.height / 2
-            vertex.z = -rando * 500
+          if (imgData.data[x * 4 + y * 4 * imgData.width] < 8) {
+            vertexes[count].x = x - imgData.width / 2
+            vertexes[count].y = -y + imgData.height / 2
+            vertexes[count].z = -rando * 900
 
-            vertex.speed = rando / speed + 0.015
+            vertexes[count].speed = rando / speed + 0.015
 
-            geometry.vertices.push(vertex)
+            geometry.vertices.push(vertexes[count])
           }
         }
       }
@@ -94,7 +100,7 @@ export default {
           1000
         )
 
-        camera.zoom = 2.5
+        camera.zoom = 3
 
         scene.add(camera)
         camera.lookAt(centerVector)
@@ -128,7 +134,7 @@ export default {
       setTimeout(() => {
         changeImage()
         loopImage()
-      }, 5700);
+      }, 6700);
     }
     loopImage()
   }
