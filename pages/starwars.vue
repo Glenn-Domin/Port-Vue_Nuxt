@@ -7,7 +7,7 @@
     <section>
       <h2>Backstory</h2>
       <figure class="figure-right">
-        <img src="~/static/images/starwars/Quolas-Elrit-Tree.png" class="img" width="333.33" height="211" alt="Elrit Tree">
+        <a href="~/static/images/starwars/Quolas-Elrit-Tree.png" target="_blank"><img src="~/static/images/starwars/Quolas-Elrit-Tree.png" class="img" width="333.33" height="211" alt="Elrit Tree"></a>
         <figcaption>The Elrit Tree, Quolas</figcaption>
       </figure>
       <p>Vanzer Madaar was part of a group of Sathari peace-keepers on his homeworld of Arbooine in the Outer Rim. He lived in the great tree-city of Quolas, built into the boughs of a massive elrit tree. There was much feuding between the powerful Helshar and Tumris clans. Vanzer's group of peace-keepers would attempt to prevent disagreements between members of these clans from escalating into bloodshed.</p>
@@ -20,7 +20,7 @@
     <section>
       <h2>Character Traits</h2>
       <figure class="figure-right">
-        <img src="~/static/images/starwars/Sathari.png" class="img" width="300" height="340.33" alt="Sathari">
+        <a href="~/static/images/starwars/Sathari.png" target="_blank"><img src="~/static/images/starwars/Sathari.png" class="img" width="300" height="340.33" alt="Sathari"></a>
         <figcaption>A Sathari</figcaption>
       </figure>
       <h3>Species - Sathari</h3>
@@ -64,7 +64,7 @@
       <p>The description of <a href="https://star-wars-rpg-ffg.fandom.com/wiki/Category:Consular" target="_blank">the Consular</a> on the Fandom wiki as <q>a force sensitive character that prefer a peaceful resolution to any conflict</q> seems in keeping with the backstory above, with the character repulsed by the militarisation of the Jedi order and the character being drawn to the more traditional peace-keeping role of the Jedi.</p>
       <p>Similarly, <a href="https://star-wars-rpg-ffg.fandom.com/wiki/Arbiter" target="_blank">the Arbiter's</a> described as someone <q>who seeks to resolve situations in a calm and respectful manner</q>, which also seems to fit thematically. The skill tree also appeals to me, both containing bonuses to talking and fighting. It's also one of the few specialisations with the lightsaber as a bonus career skill, which I figure will come in handy.</p>
       <p>The career bonuses between Consular and Arbiter seem great. There's a lot of knowledge, perception, lightsaber proficiency and cool, all which I think could come in handy.</p>
-      <img src="~/static/images/starwars/Arbiter.png" class="img" width="798" height="1036" alt="Arbiter Specialisation Sheet" style="margin-left: auto; margin-right: auto; display: block;">
+      <a href="~/static/images/starwars/Arbiter.png" target="_blank"><img src="~/static/images/starwars/Arbiter.png" class="img" width="798" height="1036" alt="Arbiter Specialisation Sheet" style="margin-left: auto; margin-right: auto; display: block;"></a>
     </section>
     <hr>
   </main>

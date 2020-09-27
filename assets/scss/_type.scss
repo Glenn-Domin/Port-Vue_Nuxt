@@ -10,6 +10,16 @@
   font-family: $font-family-accent;
 }
 
+.title {
+  margin: 0;
+  font-size: 3.5rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
 .text-center {
   text-align: center;
 }

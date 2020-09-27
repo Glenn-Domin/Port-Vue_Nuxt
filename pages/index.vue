@@ -150,13 +150,13 @@ export default {
 </style>
 
 <style lang="scss">
-.title {
-  margin: 0;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
 .subtitle {
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .home .title {
+    font-size: 3rem;
+  }
 }
 </style>
