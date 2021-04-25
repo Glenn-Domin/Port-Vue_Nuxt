@@ -59,7 +59,7 @@
       <h3>Species - Sathari</h3>
       <p>
         <a href="https://starwars.fandom.com/wiki/Sathari" target="_blank" title="Sathari Lore">Described in Legends</a> as a <q>reclusive sentient avian species</q>.
-        The Sathari capital of <a href="https://starwars.fandom.com/wiki/Quolas" target="_blank" title="More on Quolas">Quolas</a> seems particularly interesting, in that it's built up into a massive tree.
+        The Sathari city of <a href="https://starwars.fandom.com/wiki/Quolas" target="_blank" title="More on Quolas">Quolas</a> seems particularly interesting, in that it's built up into a massive tree.
         As the homeworld of <a href="https://starwars.fandom.com/wiki/Arbooine" target="_blank" title="More on Arbooine">Arbooine</a> has already had politcal interference from the Jedi in legends, I think it's not too much of a stretch to bring the Jedi/Separatist conflict there full-force in Vanzer's backstory.
       </p>
       <p style="margin-bottom: 0;"><a href="https://star-wars-rpg-ffg.fandom.com/wiki/Sathari" target="_blank" title="See Stats">Sathari have the following stats</a>:</p>

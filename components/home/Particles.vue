@@ -5,7 +5,12 @@
 </template>
 
 <script>
-import * as THREE from 'three'
+import { PointsMaterial, BufferGeometry, Vector3, Points, Scene, WebGLRenderer, OrthographicCamera } from 'three'
+import brackets2 from '~/static/images/icon-brackets2.png'
+import css2 from '~/static/images/icon-css2.png'
+import bracketsCurly2 from '~/static/images/icon-bracketsCurly2.png'
+import code2 from '~/static/images/icon-code2.png'
+import terminal2 from '~/static/images/icon-terminal2.png'
 
 export default {
   computed: {
@@ -19,12 +24,11 @@ export default {
     let scene
     let camera
     const images = [
-      require('~/static/images/icon-brackets2.png'),
-      require('~/static/images/icon-js2.png'),
-      require('~/static/images/icon-css2.png'),
-      require('~/static/images/icon-bracketsCurly2.png'),
-      require('~/static/images/icon-code2.png'),
-      require('~/static/images/icon-terminal2.png')
+      bracketsCurly2,
+      brackets2,
+      css2,
+      code2,
+      terminal2
     ]
     let currentIndex = images.length - 1
     let particles
@@ -33,13 +37,13 @@ export default {
     let loaded = false
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
-    const material = new THREE.PointsMaterial({
+    const material = new PointsMaterial({
       size: 2,
       color: 0xE34F26,
       sizeAttenuation: false
     })
 
-    const centerVector = new THREE.Vector3(0, 0, 0)
+    const centerVector = new Vector3(0, 0, 0)
     const speed = 10
 
     const getImageData = (image) => {
@@ -50,7 +54,8 @@ export default {
     }
 
     const drawTheMap = () => {
-      const geometry = new THREE.Geometry()
+      const geometry = new BufferGeometry()
+      const points = []
       let count = 0
 
       for (let y = 0, y2 = imgData.height; y < y2; y += 2) {
@@ -58,7 +63,7 @@ export default {
         for (let x = 0, x2 = imgData.width; x < x2; x += 2) {
           count = count + 1
           if (!vertexes[count]) {
-            vertexes[count] = new THREE.Vector3()
+            vertexes[count] = new Vector3()
           }
           const rando = Math.random()
           if (imgData.data[x * 4 + y * 4 * imgData.width] < 8) {
@@ -68,12 +73,14 @@ export default {
 
             vertexes[count].speed = rando / speed + 0.015
 
-            geometry.vertices.push(vertexes[count])
+            points.push(vertexes[count])
+            geometry.setFromPoints( points );
+            
           }
         }
       }
 
-      particles = new THREE.Points(geometry, material)
+      particles = new Points(geometry, material)
       scene.add(particles)
 
       if (!loaded) {
@@ -83,15 +90,15 @@ export default {
     }
 
     const init = () => {
-      scene = new THREE.Scene()
+      scene = new Scene()
       if (!loaded) {
-        renderer = new THREE.WebGLRenderer({
+        renderer = new WebGLRenderer({
           canvas: document.getElementById('map'),
           antialias: true,
           alpha: true
         })
         renderer.setSize(this.viewportWidth, this.viewportWidth)
-        camera = new THREE.OrthographicCamera(
+        camera = new OrthographicCamera(
           this.viewportWidth / -2,
           this.viewportWidth / 2,
           this.viewportWidth / 2,
@@ -119,7 +126,7 @@ export default {
 
     const render = (a) => {
       requestAnimationFrame(render)
-      particles.geometry.verticesNeedUpdate = true
+      particles.geometry.attributes.position.needsUpdate = true
       camera.position.x += (0 - camera.position.x) * 0.05
       camera.position.y += (0 - camera.position.y) * 0.05
       camera.lookAt(centerVector)
