@@ -28,23 +28,18 @@
     </section>
     <netlifyForm />
     <about v-if="showModal" @close="showModal = false" />
-    <particles v-if="isAble" />
   </main>
 </template>
 
 <script>
 import about from '~/components/home/About'
 import netlifyForm from '~/static/form'
-const particles = () => window.NodeList && NodeList.prototype.forEach
-  ? import('~/components/home/Particles.vue')
-  : false
 
 export default {
   layout: 'default',
   components: {
     about,
-    netlifyForm,
-    particles
+    netlifyForm
   },
   data() {
     return {

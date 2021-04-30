@@ -6,9 +6,9 @@
 
 <script>
 import { PointsMaterial, BufferGeometry, Vector3, Points, Scene, WebGLRenderer, OrthographicCamera } from 'three'
-import brackets2 from '~/static/images/icon-brackets2.png'
-import css2 from '~/static/images/icon-css2.png'
-import bracketsCurly2 from '~/static/images/icon-bracketsCurly2.png'
+// import brackets2 from '~/static/images/icon-brackets2.png'
+// import css2 from '~/static/images/icon-css2.png'
+// import bracketsCurly2 from '~/static/images/icon-bracketsCurly2.png'
 import code2 from '~/static/images/icon-code2.png'
 import terminal2 from '~/static/images/icon-terminal2.png'
 
@@ -20,19 +20,21 @@ export default {
     }
   },
   mounted() {
+    this.doTheThing()
+  },
+  methods: {
+    doTheThing() {
     let renderer
     let scene
     let camera
     const images = [
-      bracketsCurly2,
-      brackets2,
-      css2,
       code2,
       terminal2
     ]
     let currentIndex = images.length - 1
     let particles
     const vertexes = []
+    const geometry = new BufferGeometry()
     let imgData = images[currentIndex]
     let loaded = false
     const canvas = document.createElement('canvas')
@@ -54,7 +56,6 @@ export default {
     }
 
     const drawTheMap = () => {
-      const geometry = new BufferGeometry()
       const points = []
       let count = 0
 
@@ -94,7 +95,7 @@ export default {
       if (!loaded) {
         renderer = new WebGLRenderer({
           canvas: document.getElementById('map'),
-          antialias: true,
+          antialias: false,
           alpha: true
         })
         renderer.setSize(this.viewportWidth, this.viewportWidth)
@@ -124,13 +125,13 @@ export default {
       image.src = images[currentIndex]
     }
 
-    const render = (a) => {
-      requestAnimationFrame(render)
-      particles.geometry.attributes.position.needsUpdate = true
-      camera.position.x += (0 - camera.position.x) * 0.05
-      camera.position.y += (0 - camera.position.y) * 0.05
-      camera.lookAt(centerVector)
-      renderer.render(scene, camera)
+    const render = () => {
+        console.log('test b')
+
+        // particles.geometry.attributes.position.needsUpdate = true
+        camera.lookAt(centerVector)
+        renderer.render(scene, camera)
+        requestAnimationFrame(render)
     }
 
     const image = document.createElement('img')
@@ -141,9 +142,10 @@ export default {
       setTimeout(() => {
         changeImage()
         loopImage()
-      }, 6700);
+      }, 4000);
     }
     loopImage()
+    }
   }
 }
 </script>
