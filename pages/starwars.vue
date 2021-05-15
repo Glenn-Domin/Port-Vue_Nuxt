@@ -24,7 +24,7 @@
         <h4>Peacekeeping</h4>
         <p>As an Adolescent, Vanzer was taken under the wing (pun intended) of an Elder Peacekeeper: Raeko. He trained Vanzer and encouraged him to persist with the profession.</p>
         <p>Raeko was well respected in many quarters, including among the two major gangs; the Helshar and Tumris clans, due to his level-head and common-sense approach taking precedence over the rule of law.</p>
-        <p>An incident occurred one day during a spat between the two clans. Raeko got in-between both groups and tried to talk them down. One gang youth, unfamiliar with Raeko's reputation, threw a Diiro loaded with a poison cartridge at him.</p>
+        <p>An incident occurred one day during a spat between the two clans. Raeko got in-between both groups and tried to talk them down. One gang youth, unfamiliar with Raeko or his reputation, threw a Diiro loaded with a poison cartridge at him.</p>
         <p>Shocked by this, most clan-members on both sides dispersed, while others tried to help. They and Vanzer took him to seek medical attention. Raeko died that day.</p>
         <p>When all was done, Vanzer returned to the scene and, seeing the Diiro still there, he collected it. He sees the weapon as a reminder to not jump to violence unnecessarily, but to be ready for it.</p>
       </section>
