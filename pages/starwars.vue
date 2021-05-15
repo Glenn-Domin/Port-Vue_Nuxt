@@ -17,11 +17,15 @@
       <p>Today he tries to maintain a low profile, keeping front-of-mind the knowledge that his force powers would attract the attention of the new Galactic Empire.</p>
       <section>
         <h3>Family / Upbringing</h3>
+        <figure class="figure-right">
+          <img src="~/static/images/starwars/Pillar_of_the_Ancestors_CotG.png" class="img" width="381" height="487.5" alt="Pillar of the Ancestors" loading="lazy">
+          <figcaption>Pillar of the Ancestors</figcaption>
+        </figure>
         <ul>
           <li>
             <h4>Woodworking / Crafting</h4>
             <p>Vanzer's parents were both professional craftspeople, and taught Vanzer both the skill and the cultural history that goes along with it.</p>
-            <p>Woodworking isn't just a utilitarian craft for the Sathari, it's also a means to convey a story. Histories can be carved into ornate works.</p>
+            <p>Woodworking isn't just a utilitarian craft for the Sathari, it's also a means to convey a story. Histories can be carved into ornate works. An example of this is the Pillar of the Ancestors in Vanzer's home city of Quolas, which is a massive pillar, hundreds of meters tall, and is carved with images from Quolas' history.</p>
             <p>Vanzer respects this practice and wishes to carry it on in some form.</p>
           </li>
           <li>
@@ -138,8 +142,8 @@
       </p>
       <h3>Background</h3>
       <figure class="figure-right">
-        <img src="~/static/images/starwars/Pillar_of_the_Ancestors_CotG.png" class="img" width="381" height="487.5" alt="Pillar of the Ancestors" loading="lazy">
-        <figcaption>Pillar of the Ancestors</figcaption>
+        <img src="~/static/images/starwars/Arbooine_CotG.png" class="img" width="325" height="332.5" alt="The planet Arbooine" loading="lazy">
+        <figcaption>Arbooine</figcaption>
       </figure>
       <p>Arbooine is covered almost entirely in dense and impenetrable temperate, ancient-growth forests and topped with small icecaps at both poles. It has no true oceans to speak of, but it has countless freshwater rivers and lakes, varying in size from small pools to inland seas. the planet is home to many native species, including harmless herbivores, such as the utarvix, and dangerous predators, like the venomous bearsloth.</p>
 
