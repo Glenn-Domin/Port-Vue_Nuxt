@@ -17,16 +17,23 @@
       <p>Today he tries to maintain a low profile, keeping front-of-mind the knowledge that his force powers would attract the attention of the new Galactic Empire.</p>
       <section>
         <h3>Family / Upbringing</h3>
-        <h4>Woodworking / Crafting</h4>
-        <p>Vanzer's parents were both professional craftspeople, and taught Vanzer both the skill and the cultural history that goes along with it.</p>
-        <p>Woodworking isn't just a utilitarian craft for the Sathari, it's also a means to convey a story. Histories can be carved into ornate works.</p>
-        <p>Vanzer respects this practice and wishes to carry it on in some form.</p>
-        <h4>Peacekeeping</h4>
-        <p>As an Adolescent, Vanzer was taken under the wing (pun intended) of an Elder Peacekeeper: Raeko. He trained Vanzer and encouraged him to persist with the profession.</p>
-        <p>Raeko was well respected in many quarters, including among the two major gangs; the Helshar and Tumris clans, due to his level-head and common-sense approach taking precedence over the rule of law.</p>
-        <p>An incident occurred one day during a spat between the two clans. Raeko got in-between both groups and tried to talk them down. One gang youth, unfamiliar with Raeko or his reputation, threw a Diiro loaded with a poison cartridge at him.</p>
-        <p>Shocked by this, most clan-members on both sides dispersed, while others tried to help. They and Vanzer took him to seek medical attention. Raeko died that day.</p>
-        <p>When all was done, Vanzer returned to the scene and, seeing the Diiro still there, he collected it. He sees the weapon as a reminder to not jump to violence unnecessarily, but to be ready for it.</p>
+        <ul>
+          <li>
+            <h4>Woodworking / Crafting</h4>
+            <p>Vanzer's parents were both professional craftspeople, and taught Vanzer both the skill and the cultural history that goes along with it.</p>
+            <p>Woodworking isn't just a utilitarian craft for the Sathari, it's also a means to convey a story. Histories can be carved into ornate works.</p>
+            <p>Vanzer respects this practice and wishes to carry it on in some form.</p>
+          </li>
+          <li>
+            <h4>Peacekeeping</h4>
+            <p>As an Adolescent, Vanzer was taken under the wing (pun intended) of an Elder Peacekeeper: Raeko. He trained Vanzer and encouraged him to persist with the profession.</p>
+            <p>Raeko was well respected in many quarters, including among the two major gangs; the Helshar and Tumris clans, due to his level-head and common-sense approach taking precedence over the rule of law.</p>
+            <p>An incident occurred one day during a spat between the two clans. Raeko got in-between both groups and tried to talk them down. One gang youth, unfamiliar with Raeko or his reputation, threw a Diiro loaded with a poison cartridge at him.</p>
+            <p>Shocked by this, most clan-members on both sides dispersed, while others tried to help. They and Vanzer took him to seek medical attention. Raeko died that day.</p>
+            <p>When all was done, Vanzer returned to the scene and, seeing the Diiro still there, he collected it. He sees the weapon as a reminder to not jump to violence unnecessarily, but to be ready for it.</p>
+            <p>Vanzer continued as a Peacekeeper after that.</p>
+          </li>
+        </ul>
       </section>
       <section>
         <h3>Character Perspectives</h3>
