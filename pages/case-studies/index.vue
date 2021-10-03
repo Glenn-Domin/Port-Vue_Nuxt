@@ -40,10 +40,34 @@ export default {
     return {
       images: [
         {
+          name: 'teds',
+          label: "Ted's Cameras",
+          sub: 'Magento e-commerce site.',
+          path: require('~/static/images/teds-bg-op.png')
+        },
+        {
+          name: 'highgrove',
+          label: "Highgrove Bathrooms",
+          sub: 'Magento e-commerce site.',
+          path: require('~/static/images/highgrove-bg-op.png')
+        },
+        {
           name: 'qtco',
           label: 'QTCo.',
           sub: 'VueJS/Laravel admin/client portal.',
           path: require('~/static/images/qtco-bg.png')
+        },
+        {
+          name: 'louenhide',
+          label: 'Louenhide',
+          sub: 'WooCommerce e-commerce site.',
+          path: require('~/static/images/lh-lg-op.jpg')
+        },
+        {
+          name: 'tus',
+          label: 'Total Uniform Solutions',
+          sub: 'Magento multi-store e-commerce site.',
+          path: require('~/static/images/tus-lg-op.jpg')
         },
         {
           name: 'campdraft-one',
@@ -56,18 +80,6 @@ export default {
           label: 'Australian Campdrafting Association',
           sub: 'WordPress Public-facing site.',
           path: require('~/static/images/cd4-lg-op.jpg')
-        },
-        {
-          name: 'tus',
-          label: 'Total Uniform Solutions',
-          sub: 'Magento multi-store e-commerce site.',
-          path: require('~/static/images/tus-lg-op.jpg')
-        },
-        {
-          name: 'louenhide',
-          label: 'Louenhide',
-          sub: 'WooCommerce e-commerce site.',
-          path: require('~/static/images/lh-lg-op.jpg')
         }
       ],
       transitioning: false,

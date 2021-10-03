@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/_variables.scss';
 .above-fold {
   position: absolute;
   top: 0;
@@ -32,7 +33,7 @@ export default {
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #1c1d25;
+  background-color: $dark;
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +46,7 @@ export default {
     height: 100%;
     width: 100%;
     display: block;
-    background: #1c1d25;
+    background: $dark;
     opacity: .75;
     transition: opacity .3s ease;
     z-index: 2;
