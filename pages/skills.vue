@@ -148,7 +148,7 @@
               Magento
               <magento width="25" height="29.58" />
             </h3>
-            <p>I've worked on quite a lot of Magento sites (some Magento 1 but mostly Magento 2) sites over the years, my poster-child for which is <nuxt-link class="nav-link" to="case-studies/tus">Total Uniform Solutions</nuxt-link>.</p>
+            <p>I've worked on quite a lot of Magento sites (some Magento 1 but mostly Magento 2) sites over the years, my poster-child for which is <nuxt-link class="nav-link" to="case-studies/teds">Ted's Cameras</nuxt-link>.</p>
             <p>We've been using a docker container for setting up a dev environment but I think there's more to investigate performance-wise for ease of development.</p>
             <p>We've eschewed the default Magento LESS functionality for SCSS and Bootstrap, with the noteable exceptions of layout and buttons (sort of).</p>
             <p>I'm fairly confident with the Magento front-end, though there are some things in the XML and JS arenas where I need to learn more about the Magento way of doing things. I've completed certified <a href="https://u.magento.com/certification/directory/dev/3340373" target="_blank" rel="noreferrer">M2 Front End Developer</a> training to accomplish this.</p>

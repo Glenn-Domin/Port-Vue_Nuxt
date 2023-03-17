@@ -40,6 +40,12 @@ export default {
     return {
       images: [
         {
+          name: 'peak',
+          label: "Peak Marketing",
+          sub: 'Magento e-commerce site.',
+          path: require('~/static/images/peak-lg-op.jpg')
+        },
+        {
           name: 'teds',
           label: "Ted's Cameras",
           sub: 'Magento e-commerce site.',
